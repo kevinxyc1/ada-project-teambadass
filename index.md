@@ -50,7 +50,6 @@ At first glance, it seems like there are no specific residential areas: the home
 Now that we have estimated where every user lives, let’s see how far from their home they like to explore! Do they wander far off and discover new areas or do they restrict themselves to only their neighborhood?
 
 <!---_(Figure showing the probability distribution according the distance from home in km)!_ -->
-<!--- {% include plots/distance_to_home.html %}-->
 
 Surprisingly, individuals don’t travel that far! According to the plot above, users tend to stay within less than 15 km from their home and rarely wander off.  How far does 15 km look like on a Tokyo and NYC map?
 As you can see on both maps, a 15 km radius covers most of the area of both NYC and Tokyo. As a result, if you place an individual in the center of that circle and have them move like a New Yorker or Tokyoite, it will most likely stay within this circle! We can see that they spend most of their time wandering these areas!
