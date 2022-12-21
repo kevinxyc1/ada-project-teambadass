@@ -134,6 +134,24 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 <img src="assets/img/net1.png" class="center"/>
 
+Here are my images:
+
+<img id="myImage" src="assets/img/net1.png" alt="Description of image 1">
+
+<script>
+  function swapImage() {
+    var image = document.getElementById("myImage");
+    if (image.src.match("assets/img/net1.png")) {
+      image.src = "assets/img/net2.png";
+    } else {
+      image.src = "assets/img/net1.png";
+    }
+  }
+</script>
+
+<button onclick="swapImage()">Click me to swap images</button>
+
+
 - We have created a flavor network graph where the nodes represent actors and the edges represent the movies that they have appeared in together. The size of the nodes reflects the average revenue of the movies that the actor has appeared in, while the width of the edges indicates the number of times that the actors have appeared in a movie together.
 - This graph includes 61 actors and 256 connections. In the following section, we will delve deeper into this visualization to gain insights into the relationships between actors and their influence on revenue.
 
@@ -159,8 +177,6 @@ To gain a deeper understanding of the relationships between actors and their imp
 We observed a significant difference in the average revenue between movies with a cast that is largely concentrated within a single community and those with a more evenly distributed cast. To more accurately assess the impact of cast composition on revenue, it is important to consider other factors that could influence the results. One way to control for these potential confounds is through the use of matching, which allows us to compare movies with similar characteristics. By controlling for these other factors, we can more confidently attribute any observed differences in revenue to the effect of cast composition. This will help us better understand the relationship between cast composition and movie revenue and identify any trends or patterns. The following plots show a difference-in-difference approach on matched and unmatched data. 
 
 <img src="assets/img/evenly_vs_majority.png" class="center"/>
-
-<iframe src="assets/plot/evenly_vs_majority.html" width="750px" height="530px" frameborder="0" position="relative">Even vs majority cast</iframe>
 
 Our revised difference-in-differences analysis revealed that movies with a majority of actors from a specific community have a significant impact on box office revenue. The treatment effect was substantial in both estimates, with and without matching, at $51620924.7 and $39424016.7, respectively. The difference between the two estimates was approximately -23.63%, and both estimates were statistically significant with a p-value of 0.0.
 
