@@ -30,6 +30,10 @@ In our initial analysis, we define the success of a movie in terms of box office
 
 ## Release Date
 
+This is the interactive plot:
+
+<iframe src="assets/plots/genre-plot.html" width="100%" height="600px"></iframe>
+
 -----------------------
 
 ## Diversity
