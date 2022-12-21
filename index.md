@@ -145,7 +145,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 <script>
   function swapImage() {
-    var image = document.getElementById("myImage");
+    var image = document.getElementById("communities_img");
     if (image.src.match("assets/img/communities.png")) {
       image.src = "assets/img/community_revenue.png";
     } else {
@@ -167,7 +167,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 <script>
   function swapImage3(newImage) {
-    var image = document.getElementById("myImage");
+    var image = document.getElementById("flavour2_img");
     image.src = newImage;
   }
 </script>
