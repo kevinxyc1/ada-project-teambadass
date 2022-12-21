@@ -2,9 +2,9 @@
 layout: page
 title: The Recipe For A Movie's Success 🎬
 subtitle: Analysis of various factors that lead to high box office
-cover-img: /assets/img/movie.jpeg
-thumbnail-img: /assets/img/movie.jpeg
-share-img: /assets/img/movie.jpeg
+cover-img: /assets/img/movie.png
+thumbnail-img: /assets/img/movie.png
+share-img: /assets/img/movie.png
 use-site-title: true
 ---
 
@@ -32,7 +32,7 @@ In our initial analysis, we define the success of a movie in terms of box office
 
 This is the interactive plot:
 
-<iframe src="assets/plot/genre-plot-sm.html" width="700px" height="500px" frameborder="0" postion="relative">Genre plot</iframe>
+<iframe src="assets/plot/genre-plot-sm.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 -----------------------
 
@@ -41,7 +41,7 @@ This is the interactive plot:
 ### Ethnicity
 
 ### Gender
-<iframe src="assets/plot/revenue_gender.html" width="700px" height="500px" frameborder="0" postion="relative">Genre plot</iframe>
+<iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 -----------------------
 
@@ -173,14 +173,14 @@ Next, we investigate: Does a movie's runtime affect the box office revenue?
 
 ### Distribution
 Before we dive into the topic, we first look at the distribution of runtime across all movies with a histogram. From the log histogram, we can see that most of the movies have runtime within the 85-120 minute interval.
-<iframe src="assets/plot/runtime_hist.html" width="700px" height="600px" frameborder="0" position="relative">Runtime Histogram</iframe>
+<iframe src="assets/plot/runtime_hist.html" width="750px" height="630px" frameborder="0" position="relative">Runtime Histogram</iframe>
 
 The first step to discover the relationship is through linear regression between runtime and revenue. From our model, there is a slight positive linear relationship between runtime and revenue. However from the regression analysis, the R squared value (0.035) is too small to justify the dependency between runtime and revenue. We also see that movie with runtime between 80-120 minutes have similar distribution of revenue and movies with runtime less than 80 minutes generate less revenue (highet revenue is below $400000000). Thus we can raise the question that if 80 minute could be a threshold for movie's revenue performance and we will address it in the next section.
 
 ### Does it hurt if runtime is too short?
 We define short movie to have runtime < 80min and other (non-short) movie to have runtime >= 80min. Here we examine the histogram overlaying the revenue between two classes of movies. We see that all short movies in the dataset does not exceed 225 million and there are quite a few non-short movies with very high revenues.
 
-<iframe src="assets/plot/short_vs_nonshort.html" width="700px" height="600px" frameborder="0" position="relative">short vs nonshort Histogram</iframe>
+<iframe src="assets/plot/short_vs_nonshort.html" width="750px" height="630px" frameborder="0" position="relative">short vs nonshort Histogram</iframe>
 
 Then we perform independent t-test between revenues of short and non-short movies. the t-test gives us a small p-value (<< 0.05), which indicates a statistically significant difference between the samples. Further, the mean difference tells us that short movies (< 80min) generally generates less revenue than non-short (>=80min) movies. We can conclude that movies should not be too short as short movies have **54.8%** less revenue than non-short movies.
 
