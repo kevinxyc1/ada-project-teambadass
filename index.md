@@ -32,7 +32,7 @@ In our initial analysis, we define the success of a movie in terms of box office
 
 This is the interactive plot:
 
-<iframe src="assets/plot/genre-plot.html" width="150%" height="100%" frameborder="0">Genre plot</iframe>
+<iframe src="assets/plot/genre-plot.html" width="100%" height="100%">Genre plot</iframe>
 
 -----------------------
 
