@@ -38,6 +38,12 @@ This is the interactive plot:
 
 ## Diversity
 
+### Ethnicity
+
+<iframe src="assets/plot/revenue_ethnicity.html" width="700px" height="500px" frameborder="0" postion="relative">Genre plot</iframe>
+
+### Genger
+
 -----------------------
 
 ## Cast
