@@ -166,15 +166,15 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 <img id="myImage" src="assets/img/flavour_plot2.png" alt="Description of image 1">
 
 <script>
-  function swapImage(newImage) {
+  function swapImage3(newImage) {
     var image = document.getElementById("myImage");
     image.src = newImage;
   }
 </script>
 
-<button onclick="swapImage('assets/img/flavour_plot2.png')">All connections</button>
-<button onclick="swapImage('assets/img/non_community_edges.png')">Community connections</button>
-<button onclick="swapImage('assets/img/community_graph.png')">Non-community connections</button>
+<button onclick="swapImage3('assets/img/flavour_plot2.png')">All connections</button>
+<button onclick="swapImage3('assets/img/non_community_edges.png')">Community connections</button>
+<button onclick="swapImage3('assets/img/community_graph.png')">Non-community connections</button>
 
 
 <img id="myImage" src="assets/img/flavour_plot2.png" alt="Description of image 1">
