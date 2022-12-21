@@ -192,6 +192,37 @@ We perform independent t-test between runtime between blockbuster and non-blockb
 -----------------------
 
 ## Plot Summary
+In this analysis, we decide to look into plot summary and specifically if words with positive, negative and violent connotations have an impact on a movie's box office revenue.
+To make it a fair measure for all movies with various plot length, we will take the proportion of positive, negative, violent words in the plot so that the standard will be normalized from 0 to 1.
+
+### Linear Regression
+To commence the analysis, we perform linear regression of positive, negative, violent word proportion with respect to revenue and discover if there is any linear relationship.
+
+<iframe src="assets/plot/positive_scatter.html" width="700px" height="600px" frameborder="0" position="relative" display="inline">positive scatterplot</iframe>
+<iframe src="assets/plot/negative_scatter.html" width="700px" height="600px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
+<iframe src="assets/plot/violent_scatter.html" width="700px" height="600px" frameborder="0" position="relative" display="inline">violent scatterplot</iframe>
+
+From the scatterplot, we see that there is a negative linear relationship between positive word proportion and revenue. In contrast, there is a positive linear relationship between negative word proportion and revenue. There is also a positive linear relationship between violent word proportion and revenue.
+However from our regression analysis, the R squared value is too small to justify the dependency between all sentiments and revenue.
+We see a opposing relationship between positive and negative plots and we will discover if more positive plot or more negative plot can boost the revenue in the following section.
+
+### More positivity or more negativity?
+We continue our analysis that if plots with more positive word proportions will generate more revenues than those with more negative word proportions.
+By performing independent t-test between revenues of more positive and more negative plot movies, it gives us a small p-value which indicates a statistically significant difference between the samples.
+Further, the mean difference tells us that movies with more positive plot generally has less revenue than movies with more negative plot.
+We can conclude that movies with more negative plot are more successful, as movies with more negative plot have **45.3%** more revenue than movies with more positive plot.
+
+### Blockbuster's special sentiments
+So how do the sentiments look on all blockbusters compared to non-blockbusters.
+(Note: we previously defined blockbusters as movies with revenue >= 400 million USD and non-blockbusters as movies with revenue < 400 million USD.)
+To investigate this question, we perform independent t-tests between positive/negative/violent word porportions of blockbusters and non-blockbusters.
+
+- Positive: the independent t-test for positive words gives us a small p-value, which indicates a statistically significant difference between the samples.
+Further, the mean difference tells us that blockbuster movies generally has smaller positive word proportion in summary than non-blockbuster. We can conclude that less positive plot components are more successful, as blockbuster movies have **10.2% less positive word usage** than non-blockbuster movies.
+- Negative: the independent t-test for negative words gives us a small p-value, which indicates a statistically significant difference between the samples.
+Further, the mean difference tells us that blockbuster movies generally has higher negative word proportion in summary than non-blockbuster. We can conclude that more negative plot components are more successful, as blockbuster movies have **12.4% more negative word proportion** than non-blockbuster movies.
+- Violent: the independent t-test for violent words gives us a small p-value, which indicates a statistically significant difference between the samples.
+Further, the mean difference tells us that blockbuster movies generally has higher violent word proportion in summary than non-blockbuster. We can conclude that more violent plot components are more successful as blockbuster movies have **36.9% higher violent word proportion** than non-blockbuster movies.
 
 -----------------------
 
