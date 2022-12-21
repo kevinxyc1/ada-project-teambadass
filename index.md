@@ -40,6 +40,8 @@ This is the interactive plot:
 
 ### Ethnicity
 
+Update plot:
+
 <iframe src="assets/plot/revenue_ethnicity.html" width="700px" height="500px" frameborder="0" postion="relative">Genre plot</iframe>
 
 ### Genger
