@@ -48,8 +48,6 @@ This is the interactive plot:
 ## Cast
 In this analysis, we aim to investigate the influence of a movie's cast on its box office revenue. By analyzing the CMU Movie Summary Corpus dataset, we will explore the potential impact of individual actors and combinations of actors on a film's financial success. To further understand the relationship between cast and revenue, we will conduct network analysis to evaluate the roles of individual actors and actor combinations in generating revenue.
 
-<iframe src="assets/plot/flavor1.html" width="750px" height="530px" frameborder="0" position="relative">Testing interaction</iframe>
-
 ### Summary
 - Our analysis found that actors are significant contributors to a movie's box office revenue, as seen in the linear regression model. 
 - Our network analysis revealed that actors tend to form communities that frequently work together on films. 
