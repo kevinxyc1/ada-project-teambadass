@@ -169,9 +169,25 @@ Although we do not have data on how budgets were specifically allocated for each
 -----------------------
 
 ## Runtime
+Next, we investigate: Does a movie's runtime affect the box office revenue? 
 
-Blockbuster movies ($400 million+) have, on average, 10.1% longer runtime than non-blockbuster movies.
-Movies with short runtime (<80min) have 54.8% less revenue than non-short movies.
+### Distribution
+Before we dive into the topic, we first look at the distribution of runtime across all movies with a histogram. From the log histogram, we can see that most of the movies have runtime within the 85-120 minute interval.
+<iframe src="assets/plot/runtime_hist.html" width="700px" height="600px" frameborder="0" position="relative">Runtime Histogram</iframe>
+
+The first step to discover the relationship is through linear regression between runtime and revenue. From our model, there is a slight positive linear relationship between runtime and revenue. However from the regression analysis, the R squared value (0.035) is too small to justify the dependency between runtime and revenue. We also see that movie with runtime between 80-120 minutes have similar distribution of revenue and movies with runtime less than 80 minutes generate less revenue (highet revenue is below $400000000). Thus we can raise the question that if 80 minute could be a threshold for movie's revenue performance and we will address it in the next section.
+
+### Does it hurt if runtime is too short?
+We define short movie to have runtime < 80min and other (non-short) movie to have runtime >= 80min. Here we examine the histogram overlaying the revenue between two classes of movies. We see that all short movies in the dataset does not exceed 225 million and there are quite a few non-short movies with very high revenues.
+
+<iframe src="assets/plot/short_vs_nonshort.html" width="700px" height="600px" frameborder="0" position="relative">short vs nonshort Histogram</iframe>
+
+Then we perform independent t-test between revenues of short and non-short movies. the t-test gives us a small p-value (<< 0.05), which indicates a statistically significant difference between the samples. Further, the mean difference tells us that short movies (< 80min) generally generates less revenue than non-short (>=80min) movies. We can conclude that movies should not be too short as short movies have **54.8%** less revenue than non-short movies.
+
+### Are blockbuster movies generally longer in runtime?
+To answer this question, we define blockbusters as movies with revenue >= 400 million USD and non-blockbusters as movies with revenue < 400 million USD.
+
+We perform independent t-test between runtime between blockbuster and non-blockbuster movies which gives us a small p-value (<< 0.05), which indicates a statistically significant difference between the samples. Further, the mean difference tells us that the blockbuster runtime is generally longer than non-blockbuster. We can conclude that longer runtime are more successful, as **blockbuster movies have 10.05% longer runtime than non-blockbuster movies**.
 
 -----------------------
 
@@ -179,6 +195,6 @@ Movies with short runtime (<80min) have 54.8% less revenue than non-short movies
 
 -----------------------
 
-## Conclusion & Our recipe:
+## Conclusion & Our recipe
 
 -------------
