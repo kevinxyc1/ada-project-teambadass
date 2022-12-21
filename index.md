@@ -160,6 +160,8 @@ We observed a significant difference in the average revenue between movies with 
 
 <img src="assets/img/evenly_vs_majority.png" class="center"/>
 
+<iframe src="assets/plot/evenly_vs_majority.html" width="750px" height="530px" frameborder="0" position="relative">Even vs majority cast</iframe>
+
 Our revised difference-in-differences analysis revealed that movies with a majority of actors from a specific community have a significant impact on box office revenue. The treatment effect was substantial in both estimates, with and without matching, at $51620924.7 and $39424016.7, respectively. The difference between the two estimates was approximately -23.63%, and both estimates were statistically significant with a p-value of 0.0.
 
 In this analysis, we chose to exclude budget as a matching variable because it is likely closely related to actor cast. Using budget as a matching variable could potentially control for the effect of the actor cast, making it difficult to determine the independent effect of the actor cast on revenue. However, budget is an important factor that can influence a movie's production value and overall appeal to audiences. For example, a movie with a high budget may be more likely to generate revenue due to a larger marketing budget and wider distribution.
