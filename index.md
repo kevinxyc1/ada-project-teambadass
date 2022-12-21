@@ -141,7 +141,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 - To identify communities of actors, we will apply a network community detection algorithm. This will allow us to identify groups of actors who tend to appear in movies together and examine how these communities contribute to movie success. In particular, we will use the Louvain method to identify the "best" partition of communities in the network. By identifying these actor communities, we can gain a more detailed understanding of the patterns of collaboration and the impact of different actor combinations on movie revenue.
 
-<img id="myImage" src="assets/img/communities.png" alt="Description of image 1">
+<img id="communities_img" src="assets/img/communities.png" alt="Description of image 1">
 
 <script>
   function swapImage() {
@@ -163,7 +163,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 - We will plot the initial flavor graph again, but this time we will distinguish between connections within communities and those between communities. This will allow us to see the patterns of collaboration within and between different actor communities and better understand the impact of these connections on movie revenue. 
 
-<img id="myImage" src="assets/img/flavour_plot2.png" alt="Description of image 1">
+<img id="flavour2_img" src="assets/img/flavour_plot2.png" alt="Description of image 1">
 
 <script>
   function swapImage3(newImage) {
@@ -176,8 +176,6 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 <button onclick="swapImage3('assets/img/non_community_edges.png')">Community connections</button>
 <button onclick="swapImage3('assets/img/community_graph.png')">Non-community connections</button>
 
-
-<img id="myImage" src="assets/img/flavour_plot2.png" alt="Description of image 1">
 
 In this revised flavor plot, we have highlighted the edges that cross between two different actor communities in yellow. The other edges have a colour corresponding to their community. Our goal is to determine whether there is a difference in revenue when creating a movie cast with actors from a single community versus actors from multiple communities. To do this, we will analyze the patterns of collaboration within and between communities and examine the impact of these connections on movie revenue. Let's delve deeper into this analysis!
 
