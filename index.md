@@ -78,6 +78,12 @@ We also looked at how the effect of ethnicity has changed over time. Since the p
 #### Fig. 1.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
+#### Fig 1.4: Mean Difference: Paired Matching with Threshold = 0.5
+<iframe src="assets/plot/mean_difference_ethnicity_1.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig 1.5: Mean Difference: Paired Matching with Threshold = 0.33
+<iframe src="assets/plot/mean_difference_ethnicity_2.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
 ### 2. Gender
 
 We observed an increase in the fraction of females over time. However, as seen in fig. 2.1, a high fraction of females tends to generate lower revenue. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 07, which indicates that more data is needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be that it took time for the audience to digest this change. 
@@ -95,6 +101,12 @@ Until now have been looking at the overall impact fraction of females has on rev
 
 #### Fig. 2.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig 2.4: Mean Difference: Paired Matching with Threshold = 0.5
+<iframe src="assets/plot/mean_difference_female_1.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig 2.5: Mean Difference: Paired Matching with Threshold = 0.33
+<iframe src="assets/plot/mean_difference_female_2.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 
 -----------------------
