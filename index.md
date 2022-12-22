@@ -40,11 +40,13 @@ We continue by analysing the correlation between the month of the release of a m
 
 By performing an idependent t-test to check for the differences between a month compared to the rest we can observe that most of the months have statistical significant different means. In particular, we obtain June as the month with the highest mean and the lowest p-value. 
 
-To gain more insight we ask if the best release month differs for different genres.
-
+To gain more insight we ask if the best release month differs for different genres. Note that we will include the ten most common genre for the sake of clarity. 
 
 
 <iframe src="assets/plot/genre-plot-sm.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+We repeat our idependet t-test analysis from beforehand to subsets of the data corresponding to the different genres. As a result we obtain the months which represent the max mean per genre which are all statistical significantly different in comparison to the rest. Since we obtain different months for different genre, we conclude that it is important to know what kind of movie we are dealing with before deciding on an optimal release date. For example for comedy movies June is the month with the highest mean revenue while for romance films November has the highest mean in revenue.
+
 
 -----------------------
 
