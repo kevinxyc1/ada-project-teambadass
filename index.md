@@ -156,6 +156,10 @@ In the context of analyzing the impact of actors on movie revenue, network analy
     width: 500px;
     height: 500px;
   }
+
+  button {
+    text-align: center;
+  }
 </style>
 
 <img id="communities_img" src="assets/img/communities.png" alt="Description of image 1">
