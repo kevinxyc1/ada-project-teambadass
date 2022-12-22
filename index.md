@@ -38,17 +38,21 @@ This is the interactive plot:
 
 ## Diversity
 
-To analyze the effect diversity has on movie box office revenue, we first had to estimate the diversity of each movie. There are several ways to assess the diversity in a film, and our approach is incomplete. To evaluate diversity, we have focused on ethnicities and gender. Looking at only these two aspects will not give a complete picture of the effect of diversity, but it will provide a good insight. The next step was to give each movie a “score of ethnicity” and a “score of gender.” We observed a high correlation between the number of actors in a film and the movie's box office revenue. It was, therefore, essential to find a score that considered the number of actors. To estimate ethnicity, we introduced the “ethnicity score,” which counts the number of ethnicities present in a movie and divides it by the total number of actors. We also considered different approaches, such as giving higher weight to rare ethnicities, but concluded that our approach would suffice for our analysis, which is to look at the effect of diversity on revenue and not to get a complete insight into the diversity in each movie. To estimate gender, we introduced the “fraction of females,” computed by counting the number of female actors and dividing it by the total number of actors in that film.
+To analyze the effect diversity has on movie box office revenue, we first had to estimate the diversity of each movie. There are several ways to assess the diversity in a film, and our approach is incomplete. To evaluate diversity, we have focused on ethnicities and gender. Looking at only these two aspects will give a partial picture of the effect of diversity, but it will provide a good insight. The next step was to give each movie a “score of ethnicity” and a “score of gender.” We observed a high correlation between the number of actors in a film and the movie's box office revenue. It was, therefore, essential to find a score that considered the number of actors. To estimate ethnicity, we introduced the “ethnicity score,” which counts the number of ethnicities present in a movie and divides it by the total number of actors. We also considered different approaches, such as giving higher weight to rare ethnicities, but concluded that our approach would suffice for our analysis, which is to look at the effect of diversity on revenue and not to get a complete insight into the diversity in each movie. To estimate gender, we introduced the “fraction of females,” computed by counting the number of female actors and dividing it by the total number of actors in that film.
+
+
 
 
 ### 1. Ethnicity
 
-As you can see from fig. 1.1, the ethnicity score in movies has increased in recent years, but there are still a few movies with an ethnicity score above 0.55. When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.4. Increasing the threshold above 0.4 gives a more unreliable result, as the larger 95% CI indicates. The reason is likely because of the low number of movies, which gives each movie a more significant impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
+As you can see from fig. 1.1, the ethnicity score in movies has increased in recent years, but there are still a few movies with an ethnicity score above 0.55. When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.4. Increasing the threshold above 0.4 gives a more unreliable result, as the more significant 95% CI indicates. The reason is likely because of the low number of movies, which gives each movie a more substantial impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
+
 
 #### Fig. 1.1: Movie Distribution
 <iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 We grouped our data into five based on their ethnicity score to further investigate the effect; the results are shown in fig. 1.2. In the search for the best interval, we found an ethnicity score between (0.4 - 0.6] to be the most lucrative considering revenue maximization when we look at the mean revenue in our data set. However, overlapping 95% CI between the four highest intervals prevents us from concluding the best in general. On the other side, we can end that the worst performing interval is between (0 – 0.2], which indicates that ethnicity score is something you should consider planning your next movie, so you are not unlucky and end up in this group. As long as you stay out of this interval, it does not seem like the ethnicity score should limit your movie box revenue. However, we observe a greater variety in revenue among the movies with an ethnicity score above 0.6. The interval (0.6 – 0.8] differs the most, with great potential earnings and the risk of not performing as well as expected. 
+
 
 #### Fig. 1.2: Revenue - Overall
 <iframe src="assets/plot/revenue_ethnicity_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
@@ -56,16 +60,24 @@ We grouped our data into five based on their ethnicity score to further investig
 We also looked at how the effect of ethnicity has changed over time. Since the primary goal of this analysis is to make a recipe for a movie´s success, we looked at recent movies, starting with movies after the year 2000. As we noticed earlier, having an ethnicity score above 0.2 seems necessary, but when did this become important? From fig. 1.3 we can observe a significant difference between movies with ethnicity scores above 0.2 (treated group) and the movies with ethnicity scores below or equal to 0.2 (control group) after 2007. This indicates that it is in recent years that this has become a hot topic. Increasing the threshold to 0.3 gives almost the same result but with a slight overlap in 95% CI after 2011. Increasing the threshold makes the difference between treated and controlled less significant.
 
 
+
 #### Fig. 1.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 ### 2. Gender
 
+We observed an increase in the fraction of females over time. However, as seen in fig. 2.1, a high fraction of females tends to generate lower revenue. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 07, which indicates that more data is needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be that it took time for the audience to digest this change. 
+
+
 #### Fig. 2.1: Movie Distribution
 <iframe src="assets/plot/distribution_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
+To obtain better insight into a movie's best fraction of females, we divided the film into five groups based on their female fractions (fig. 2.2). The result shows that the worst performing interval is the fraction of females between (0.8 – 1]. In comparison, the movies with a fraction of males between (0.8 – 1] perform well and have the highest mean in our data set. There may be several reasons for this, for example, that the most attractive genre may be better suited for male actors. We will try to isolate the effect of fractions of females in the observational study later in this analysis, but for now, we will stick to our naive approach. The most crucial intel from fig. 2.2 is to avoid a fraction of females between (0.8 – 1]. It is more challenging to select the best interval, as the groups (0 – 0.2], (0.2 – 0.4], and (0.6 – 0.8] have 95% CI that overlaps. We notice that (0.6 – 0.8] has a significant 95% CI, which indicates that a fraction of females between (0 – 0.4] may be the safer choice.
+
 #### Fig. 2.2: Revenue - Overall
 <iframe src="assets/plot/revenue_female_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+Until now have been looking at the overall impact fraction of females has on revenue. This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. As you can see in fig. 2.3 the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. However, we observe a significantly better revenue for the control group with a threshold of 0.5 after 2009. This indicates that a fraction of females between 0.4 and 0.5 may be the best choice if you plan to make your next movie successful.
 
 #### Fig. 2.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
