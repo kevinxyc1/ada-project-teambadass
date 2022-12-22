@@ -149,20 +149,24 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 - To identify communities of actors, we will apply a network community detection algorithm. This will allow us to identify groups of actors who tend to appear in movies together and examine how these communities contribute to movie success. In particular, we will use the Louvain method to identify the "best" partition of communities in the network. By identifying these actor communities, we can gain a more detailed understanding of the patterns of collaboration and the impact of different actor combinations on movie revenue.
 
-<img id="communities_img" src="assets/img/communities.png" alt="Description of image 1">
+<img id="communities_img" src="assets/img/communities.png" alt="Description of image 1" width="500" height="500">
 
 <script>
   function swapImage() {
     var image = document.getElementById("communities_img");
     if (image.src.match("assets/img/communities.png")) {
       image.src = "assets/img/community_revenue.png";
+      image.width = 500;
+      image.height = 500;
     } else {
       image.src = "assets/img/communities.png";
+      image.width = 500;
+      image.height = 500;
     }
   }
 </script>
 
-<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 100%; border-radius: 25px;" onclick="swapImage()">Average revenue on/off</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 30%; border-radius: 25px;" onclick="swapImage()">Average revenue on/off</button>
 
 
 - Using the Louvain method, we have partitioned the network of actors into six distinct communities based on their connections through movies. This suggests that there are subgroups of actors who tend to work together more frequently. 
@@ -172,18 +176,21 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 
 - We will plot the initial flavor graph again, but this time we will distinguish between connections within communities and those between communities. This will allow us to see the patterns of collaboration within and between different actor communities and better understand the impact of these connections on movie revenue. 
 
-<img id="flavour2_img" src="assets/img/flavour_plot2.png" alt="Description of image 1">
+
+<img id="flavour2_img" src="assets/img/flavour_plot2.png" alt="Description of image 1" width="500" height="500">
 
 <script>
   function swapImage3(newImage) {
     var image = document.getElementById("flavour2_img");
     image.src = newImage;
+    image.width = 500;
+    image.height = 500;
   }
 </script>
 
-<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 100%; border-radius: 25px;" onclick="swapImage3('assets/img/flavour_plot2.png')">All connections</button>
-<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 100%; border-radius: 25px;" onclick="swapImage3('assets/img/non_community_edges.png')">Community connections</button>
-<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 100%; border-radius: 25px;" onclick="swapImage3('assets/img/community_graph.png')">Non-community connections</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 20%; border-radius: 25px;" onclick="swapImage3('assets/img/flavour_plot2.png')">All connections</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 20%; border-radius: 25px;" onclick="swapImage3('assets/img/non_community_edges.png')">Community</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 20%; border-radius: 25px;" onclick="swapImage3('assets/img/community_graph.png')">Non-community</button>
 
 
 In this revised flavor plot, we have highlighted the edges that cross between two different actor communities in yellow. The other edges have a colour corresponding to their community. Our goal is to determine whether there is a difference in revenue when creating a movie cast with actors from a single community versus actors from multiple communities. To do this, we will analyze the patterns of collaboration within and between communities and examine the impact of these connections on movie revenue. Let's delve deeper into this analysis!
