@@ -50,24 +50,46 @@ To gain more insight we ask if the best release month differs for different genr
 
 ## Diversity
 
+To analyze the effect diversity has on movie box office revenue, we first had to estimate the diversity of each movie. There are several ways to assess the diversity in a film, and our approach is incomplete. To evaluate diversity, we have focused on ethnicities and gender. Looking at only these two aspects will give a partial picture of the effect of diversity, but it will provide a good insight. The next step was to give each movie a “score of ethnicity” and a “score of gender.” We observed a high correlation between the number of actors in a film and the movie's box office revenue. It was, therefore, essential to find a score that considered the number of actors. To estimate ethnicity, we introduced the “ethnicity score,” which counts the number of ethnicities present in a movie and divides it by the total number of actors. We also considered different approaches, such as giving higher weight to rare ethnicities, but concluded that our approach would suffice for our analysis, which is to look at the effect of diversity on revenue and not to get a complete insight into the diversity in each movie. To estimate gender, we introduced the “fraction of females,” computed by counting the number of female actors and dividing it by the total number of actors in that film.
+
+
+
+
 ### 1. Ethnicity
+
+As you can see from fig. 1.1, the ethnicity score in movies has increased in recent years, but there are still a few movies with an ethnicity score above 0.55. When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.4. Increasing the threshold above 0.4 gives a more unreliable result, as the more significant 95% CI indicates. The reason is likely because of the low number of movies, which gives each movie a more substantial impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
+
 
 #### Fig. 1.1: Movie Distribution
 <iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
+We grouped our data into five based on their ethnicity score to further investigate the effect; the results are shown in fig. 1.2. In the search for the best interval, we found an ethnicity score between (0.4 - 0.6] to be the most lucrative considering revenue maximization when we look at the mean revenue in our data set. However, overlapping 95% CI between the four highest intervals prevents us from concluding the best in general. On the other side, we can end that the worst performing interval is between (0 – 0.2], which indicates that ethnicity score is something you should consider planning your next movie, so you are not unlucky and end up in this group. As long as you stay out of this interval, it does not seem like the ethnicity score should limit your movie box revenue. However, we observe a greater variety in revenue among the movies with an ethnicity score above 0.6. The interval (0.6 – 0.8] differs the most, with great potential earnings and the risk of not performing as well as expected. 
+
+
 #### Fig. 1.2: Revenue - Overall
 <iframe src="assets/plot/revenue_ethnicity_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+We also looked at how the effect of ethnicity has changed over time. Since the primary goal of this analysis is to make a recipe for a movie´s success, we looked at recent movies, starting with movies after the year 2000. As we noticed earlier, having an ethnicity score above 0.2 seems necessary, but when did this become important? From fig. 1.3 we can observe a significant difference between movies with ethnicity scores above 0.2 (treated group) and the movies with ethnicity scores below or equal to 0.2 (control group) after 2007. This indicates that it is in recent years that this has become a hot topic. Increasing the threshold to 0.3 gives almost the same result but with a slight overlap in 95% CI after 2011. Increasing the threshold makes the difference between treated and controlled less significant.
+
+
 
 #### Fig. 1.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 ### 2. Gender
 
+We observed an increase in the fraction of females over time. However, as seen in fig. 2.1, a high fraction of females tends to generate lower revenue. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 07, which indicates that more data is needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be that it took time for the audience to digest this change. 
+
+
 #### Fig. 2.1: Movie Distribution
 <iframe src="assets/plot/distribution_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
+To obtain better insight into a movie's best fraction of females, we divided the film into five groups based on their female fractions (fig. 2.2). The result shows that the worst performing interval is the fraction of females between (0.8 – 1]. In comparison, the movies with a fraction of males between (0.8 – 1] perform well and have the highest mean in our data set. There may be several reasons for this, for example, that the most attractive genre may be better suited for male actors. We will try to isolate the effect of fractions of females in the observational study later in this analysis, but for now, we will stick to our naive approach. The most crucial intel from fig. 2.2 is to avoid a fraction of females between (0.8 – 1]. It is more challenging to select the best interval, as the groups (0 – 0.2], (0.2 – 0.4], and (0.6 – 0.8] have 95% CI that overlaps. We notice that (0.6 – 0.8] has a significant 95% CI, which indicates that a fraction of females between (0 – 0.4] may be the safer choice.
+
 #### Fig. 2.2: Revenue - Overall
 <iframe src="assets/plot/revenue_female_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+Until now have been looking at the overall impact fraction of females has on revenue. This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. As you can see in fig. 2.3 the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. However, we observe a significantly better revenue for the control group with a threshold of 0.5 after 2009. This indicates that a fraction of females between 0.4 and 0.5 may be the best choice if you plan to make your next movie successful.
 
 #### Fig. 2.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
@@ -76,105 +98,38 @@ To gain more insight we ask if the best release month differs for different genr
 -----------------------
 
 ## Cast
-In this analysis, we aim to investigate the influence of a movie's cast on its box office revenue. By analyzing the CMU Movie Summary Corpus dataset, we will explore the potential impact of individual actors and combinations of actors on a film's financial success. To further understand the relationship between cast and revenue, we will conduct network analysis to evaluate the roles of individual actors and actor combinations in generating revenue.
+Ever wonder how much of a role the cast of a movie plays in its financial success? In this section, we'll delve into the relationship between a movie's cast and its box office revenue. We'll analyze the impact of individual actors on a film's financial performance. We'll also conduct network analysis to evaluate the roles of actor combinations in generating revenue. Whether you're a fan of A-list celebrities or indie darlings, let's find out if the cast really does make a difference in box office success.
 
-### Summary
-- Our analysis found that actors are significant contributors to a movie's box office revenue, as seen in the linear regression model. 
-- Our network analysis revealed that actors tend to form communities that frequently work together on films. 
-- By examining these communities, we discovered that movies tend to have higher revenues when the cast is drawn from a single community, rather than mixing actors from multiple communities.
+### Who's the Biggest Box Office Draw? Analyzing the Impact of Actors on Revenue
+We want to understand how much the people in a movie contribute to its financial success. To do this, we're using linear regression. It helps us see how strong the relationship is between a movie's cast and its box office revenue, and if anything else could be affecting this relationship. By fitting a line to the data, we can see how much each actor matters for a movie's financial performance.
 
-### Linear Regression
-We are using linear regression to examine the relationship between a movie's cast and its box office revenue. By fitting a linear model to the data, we can determine the strength and direction of the relationship between these variables, as well as identify any potential confounding factors that may influence the relationship. Linear regression allows us to quantitatively estimate the impact of the individual actors on a movie's financial performance.
+We're only looking at actors who have been in more than 10 movies. This helps us exclude one-time wonders and makes sure our findings are more typical of the movie industry. It's possible that actors with fewer movies can affect a movie's financial success, but these cases might not be as accurate or typical. By sticking to actors who have more experience, we can feel more confident about the conclusions we draw about what leads to financial success in the movie industry.
 
-We have chosen to only include those who have appeared in more than 10 movies. This threshold of 10 has the advantage of excluding one-hit wonders from our analysis, which can help to ensure that our findings are more representative of the broader movie industry. While it is possible for actors who have appeared in fewer than 10 movies to have a significant impact on a film's financial performance, these cases are likely to be less reliable and may not accurately reflect broader trends in the industry. By limiting our analysis to actors who have a more established track record in the movie industry, we can confidently draw conclusions about the factors that contribute to financial success in the film industry. Overall, our findings will be more reliable and meaningful when we focus on experienced and reliable actors who have a strong track record in the industry.
+| Actor | coefficient (in million $) | p-value |
+|-------|--------------------------|---------|
+| Cate Blanchett | 107.8 | 0.000 |
+| Seann William Scott | 83.2 | 0.000 |
+| James Franco | 74.5 | 0.003 |
+| Johnny Depp | 60.7 | 0.004 |
+| Anna Faris | 58.5 | 0.010 |
 
-<table>
-  <tr>
-    <th>Variable</th>
-    <th>coef</th>
-    <th>std err</th>
-    <th>t</th>
-    <th>P>|t|</th>
-    <th>[0.025</th>    <th>0.975]</th>
-  </tr>
-  <tr>
-    <td>Cate Blanchett</td>
-    <td>107800000.0</td>
-    <td>25000000.0</td>
-    <td>4.305</td>
-    <td>0.000</td>
-    <td>58700000.0</td>
-    <td>157000000.0</td>
-  </tr>
-  <tr>
-    <td>Seann William Scott</td>
-    <td>83170000.0</td>
-    <td>23300000.0</td>
-    <td>3.571</td>
-    <td>0.000</td>
-    <td>37500000.0</td>
-    <td>129000000.0</td>
-  </tr>
-  <tr>
-    <td>budget</td>
-    <td>81760000.0</td>
-    <td>3310000.0</td>
-    <td>24.671</td>
-    <td>0.000</td>
-    <td>75300000.0</td>
-    <td>88300000.0</td>
-  </tr>
-    <tr>
-    <td>James Franco</td>
-    <td>74500000.0</td>
-    <td>24600000.0</td>
-    <td>3.026</td>
-    <td>0.003</td>
-    <td>26200000.0</td>
-    <td>123000000.0</td>
-  </tr>
-  <tr>
-    <td>Johnny Depp</td>
-    <td>60650000.0</td>
-    <td>21000000.0</td>
-    <td>2.890</td>
-    <td>0.004</td>
-    <td>19500000.0</td>
-    <td>102000000.0</td>
-  </tr>
-  <tr>
-    <td>Anna Faris</td>
-    <td>58480000.0</td>
-    <td>22600000.0</td>
-    <td>2.593</td>
-    <td>0.010</td>
-    <td>14200000.0</td>
-    <td>103000000.0</td>
-  </tr>
+One interesting thing we found is that, out of the top 10 factors that seem to matter most for movie revenue (based on how strong their relationship is and how likely it is that this relationship isn't just a coincidence), the only ones besides budget are the actors. This suggests that these actors make a big impact on how much money a movie makes. But it's important to remember that an actor's impact on revenue might not just depend on their own performance. It could also depend on who they're acting with in the movie. For example, an actor might do better at the box office when they're in a movie with certain co-stars, but not as well with others. This is why we used network analysis to look at how actors work together and see if that affects revenue. For example, will Cate Blanchett rank as one of the top revenue-generating actors when we consider actor communities?
 
-</table>
+It's also worth mentioning that budget is a big factor in how much money a movie makes, but it's closely related to the revenue itself. This means it might not be as useful for understanding the impact of individual actors. We'll come back to budget later in our analysis.
 
-One interesting finding from our analysis is that, among the top 10 coefficients with the highest magnitudes and p-values below 0.05, the only factors that appear to significantly influence movie revenue besides budget are the actors. This suggests that these actors make a significant contribution to the revenue. However, it's important to keep in mind that the contribution of an actor to revenue may not solely depend on their individual performance, but also on the combination of actors they appear with in a movie. For example, an actor may have a stronger influence on revenue when paired with certain co-stars, but a weaker influence when paired with others. This highlights the need to further analyze movie casts using network analysis techniques to gain a more nuanced understanding of the relationships between actors and their impact on revenue. For example, will Cate Blanchett rank among the top revenue-generating actors when we take actor communities into consideration?
+### The Movie Cast Factor: How Actor combinations affect financial success
+Have you ever noticed that some actors seem to be in a ton of movies together? Network analysis can help us see these connections between actors and how they might affect each other's impact on a movie's revenue. By turning the relationships between actors into a visual network, we can find patterns and communities in the movie industry and get a deeper understanding of how actors contribute to revenue. Network analysis can give us some really interesting insights and help us make sense of all the complex data we have about actors and revenue. Overall, adding this technique to our analysis of actor contributions can help us understand things in a new way.
 
-Additionally, we should note that budget is a significant factor that can impact revenue, but is closely related to revenue itself and may not be the most informative when analyzing the contribution of individual actors. We will return to the role of budget in our analysis later.
+<img src="assets/img/net1.png" height=800px width=800px class="center"/>
 
+We made a graph that shows how actors are connected through the movies they've been in together. The actors are the dots (or "nodes"), and the movies they were in together are the lines (or "edges") connecting them. The size of the dots shows how much the movies that actor was in made on average, and the thickness of the lines shows how many movies the actors were in together.
 
-### Network Analysis of Actors
-In the context of analyzing the impact of actors on movie revenue, network analysis allows us to look at the connections between actors and how they may influence each other's contribution to revenue. By visualizing the relationships between actors as a network, we can identify patterns and communities within the movie industry, and gain a more nuanced understanding of the ways in which actors contribute to revenue. Overall, incorporating network analysis into our analysis of actor contributions to movie revenue can provide valuable insights and help us better understand the complex relationships within the data.
-
-<img src="assets/img/net1.png" class="center"/>
-
-- We have created a flavor network graph where the nodes represent actors and the edges represent the movies that they have appeared in together. The size of the nodes reflects the average revenue of the movies that the actor has appeared in, while the width of the edges indicates the number of times that the actors have appeared in a movie together.
-- This graph includes 61 actors and 256 connections. In the following section, we will delve deeper into this visualization to gain insights into the relationships between actors and their influence on revenue.
-
-- To gain a deeper understanding of the relationships depicted in our flavor network graph, we will utilize network analysis techniques to identify communities of actors who frequently appear in movies together and to measure the centrality of each actor in the network.
-
-- To identify communities of actors, we will apply a network community detection algorithm. This will allow us to identify groups of actors who tend to appear in movies together and examine how these communities contribute to movie success. In particular, we will use the Louvain method to identify the "best" partition of communities in the network. By identifying these actor communities, we can gain a more detailed understanding of the patterns of collaboration and the impact of different actor combinations on movie revenue.
+Our graph has 61 actors and 256 connections. In the next section, we'll take a closer look at it and use network analysis techniques to see what we can learn. We'll use these techniques to find groups of actors who often work together and see how important each actor is in the network. We'll also use something called the Louvain method to find the best way to divide the actors into communities. By looking at these actor communities, we can get a more detailed picture of how actors collaborate and how different combinations of actors affect movie revenue.
 
 <style>
   img#communities_img {
     display: block;
-    margin-left: 0 auto;
+    margin-left: 20;
     width: 650px;
     height: 557px;
   }
@@ -196,13 +151,9 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 <button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px; margin-left: 240px;" onclick="swapImage()">Average revenue on/off</button>
 
 
+We used the Louvain method to split the network of actors into six different communities based on how they're connected through movies. This shows us that there are some actors who tend to work together more often. When we looked closer, we saw that the average revenue for actors in each community varies. Some actors seem to do especially well at the box office. However, we also saw that there was no significant difference in average revenue between the communities, with one exception. This could mean that the community an actor belongs to doesn't necessarily have a big impact on how much money their movies make.
 
-- Using the Louvain method, we have partitioned the network of actors into six distinct communities based on their connections through movies. This suggests that there are subgroups of actors who tend to work together more frequently. 
-- Upon further analysis, we found that the average revenue generated by actors within each community varies, with some actors standing out as particularly successful in terms of average revenue.
-- While we have not yet explored the potential reasons for these patterns, some possibilities could include the genre or type of film associated with each community, the fame or recognition of the actors within the industry, or the social connections between the actors. 
-- For the purpose of our analysis, we are interested in examining how revenue is affected by including actors from different communities versus including actors from the same community. This will allow us to gain insights into the impact of actor combinations on movie revenue.
-
-- We will plot the initial flavor graph again, but this time we will distinguish between connections within communities and those between communities. This will allow us to see the patterns of collaboration within and between different actor communities and better understand the impact of these connections on movie revenue. 
+Regardless, it's still interesting to see how actors are connected and how they collaborate. By looking at these patterns and communities, we can get a better understanding of the movie industry and how different combinations of actors might affect revenue. We'll plot the initial graph again, but this time we'll highlight the connections within each community and the connections between communities. This will help us see the patterns of collaboration and how they relate to movie revenue.
 
 
 <style>
@@ -227,20 +178,22 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 <button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; cursor: pointer; width: 20%; border-radius: 10px; font-size: 11px; margin-right: 5px;" onclick="swapImage3('assets/img/community_graph.png')">Community</button>
 <button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; cursor: pointer; width: 20%; border-radius: 10px; font-size: 11px;" onclick="swapImage3('assets/img/non_community_edges.png')">Non-community</button>
 
+We've updated our graph to show connections between different actor communities in yellow. The other connections are colored based on which community they're in. We want to know if there's a difference in revenue when a movie's cast is mostly made up of actors from one community versus actors from a bunch of different communities. To do this, we'll look at the patterns of collaboration within and between communities and see how they affect revenue.
 
-In this revised flavor plot, we have highlighted the edges that cross between two different actor communities in yellow. The other edges have a colour corresponding to their community. Our goal is to determine whether there is a difference in revenue when creating a movie cast with actors from a single community versus actors from multiple communities. To do this, we will analyze the patterns of collaboration within and between communities and examine the impact of these connections on movie revenue. Let's delve deeper into this analysis!
+To understand the relationships between actors and their impact on revenue better, we're going to split the movies into two groups: those with a cast that's mostly made up of actors from one community, and those with a cast that's more evenly spread out among different communities. This will let us compare movies with more similar casts to movies with more diverse casts, and see if there's a relationship between cast composition and revenue. By looking at these two groups of movies, we can get an idea of the pros and cons of casting actors from one community versus a mix of communities, and how it might affect a movie's success.
 
-To gain a deeper understanding of the relationships between actors and their impact on revenue, we will divide the movies into two categories: those with a cast that is largely concentrated within a single actor community, and those with a cast that is more evenly distributed among multiple communities. This will enable us to compare the performance of movies with more homogenous casts versus those with more diverse casts, and determine whether there is a relationship between cast composition and revenue. By analyzing these two categories of movies, we can gain insights into the potential benefits and drawbacks of casting actors from a single community versus a mix of communities, and how this may impact the success of a movie.
+We noticed that there's a big difference in average revenue between movies with a cast that's mostly from one community and movies with a more evenly distributed cast. To make sure this difference isn't just because of other factors, we're using "matching" to compare movies with similar characteristics. By controlling for these other factors, we can be more sure that any differences in revenue we see are because of the cast composition. This will help us understand the relationship between cast composition and movie revenue better. The next plot compares movies with a cast that is largely concentrated within a single community to those with a more evenly distributed cast. We've matched these movies so that other factors that could affect revenue are controlled for. 
 
-We observed a significant difference in the average revenue between movies with a cast that is largely concentrated within a single community and those with a more evenly distributed cast. To more accurately assess the impact of cast composition on revenue, it is important to consider other factors that could influence the results. One way to control for these potential confounds is through the use of matching, which allows us to compare movies with similar characteristics. By controlling for these other factors, we can more confidently attribute any observed differences in revenue to the effect of cast composition. This will help us better understand the relationship between cast composition and movie revenue and identify any trends or patterns. The following plots show a difference-in-difference approach on matched and unmatched data. 
+<iframe src="assets/plot/evenly_vs_majority.html" width="600px" height="400px" frameborder="0" style="display: block; margin: 0 auto;">Difference in community cast</iframe>
 
-<img src="assets/img/evenly_vs_majority.png" class="center"/>
+Our analysis shows that movies with a majority of actors from a specific community have a big impact on box office revenue. In both estimates, with and without matching, the treatment effect was huge - around $51620924.7 and $39424016.7, respectively. The difference between these two estimates was around -23.63%, and both estimates were statistically significant with a p-value of 0.0.
 
-Our revised difference-in-differences analysis revealed that movies with a majority of actors from a specific community have a significant impact on box office revenue. The treatment effect was substantial in both estimates, with and without matching, at $51620924.7 and $39424016.7, respectively. The difference between the two estimates was approximately -23.63%, and both estimates were statistically significant with a p-value of 0.0.
+We didn't use budget as a matching variable in this analysis because it's probably closely related to the cast. If we used budget as a matching variable, it might be hard to see the independent effect of the cast on revenue. That being said, budget is still an important factor that can affect a movie's production value and overall appeal to audiences. For example, a movie with a high budget might make more money because it has more money for marketing and a wider distribution.
 
-In this analysis, we chose to exclude budget as a matching variable because it is likely closely related to actor cast. Using budget as a matching variable could potentially control for the effect of the actor cast, making it difficult to determine the independent effect of the actor cast on revenue. However, budget is an important factor that can influence a movie's production value and overall appeal to audiences. For example, a movie with a high budget may be more likely to generate revenue due to a larger marketing budget and wider distribution.
+We don't have data on how budgets were specifically used for each movie, but we think a lot of the budget probably goes towards casting. It might be more expensive to put together a cast mostly from one community, which wouldn't be relevant for our analysis of how the cast affects revenue.
 
-Although we do not have data on how budgets were specifically allocated for each movie, we speculate that a significant portion of the film's budget is often used for casting. It is possible that it is more costly to assemble a cast primarily from one community, which is irrelevant for our analysis of how movie cast affects revenue made.
+### Cast Summary
+We've learned a lot about how a movie's cast affects its box office revenue through our analysis. We found that actors can have a big impact on how well a movie does financially, which we saw in our linear regression model. We also discovered that actors tend to work together in communities and that movies with casts made up of more actors from a single community tend to make more money than movies with actors from multiple communities. It looks like the saying "there's strength in numbers" really does apply to box office success!
 
 -----------------------
 
