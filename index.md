@@ -38,16 +38,26 @@ This is the interactive plot:
 
 ## Diversity
 
-### Ethnicity
+### 1. Ethnicity
 
+#### Fig. 1.1: Movie Distribution
 <iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig. 1.2: Revenue - Overall
 <iframe src="assets/plot/revenue_ethnicity_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig. 1.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-### Gender
+### 2. Gender
 
+#### Fig. 2.1: Movie Distribution
 <iframe src="assets/plot/distribution_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig. 2.2: Revenue - Overall
 <iframe src="assets/plot/revenue_female_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Fig. 2.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 
