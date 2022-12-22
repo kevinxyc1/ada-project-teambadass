@@ -147,6 +147,14 @@ We're only looking at actors who have been in more than 10 movies. This helps us
 
 </table>
 
+| Actor | coefficient (in millions) | p-value |
+|-------|--------------------------|---------|
+| Cate Blanchett | 107.8 | 0.000 |
+| Seann William Scott | 83.2 | 0.000 |
+| James Franco | 74.5 | 0.003 |
+| Johnny Depp | 60.7 | 0.004 |
+| Anna Faris | 58.5 | 0.010 |
+
 One interesting thing we found is that, out of the top 10 factors that seem to matter most for movie revenue (based on how strong their relationship is and how likely it is that this relationship isn't just a coincidence), the only ones besides budget are the actors. This suggests that these actors make a big impact on how much money a movie makes. But it's important to remember that an actor's impact on revenue might not just depend on their own performance. It could also depend on who they're acting with in the movie. For example, an actor might do better at the box office when they're in a movie with certain co-stars, but not as well with others. This is why we used network analysis to look at how actors work together and see if that affects revenue. For example, will Cate Blanchett rank as one of the top revenue-generating actors when we consider actor communities?
 
 It's also worth mentioning that budget is a big factor in how much money a movie makes, but it's closely related to the revenue itself. This means it might not be as useful for understanding the impact of individual actors. We'll come back to budget later in our analysis.
