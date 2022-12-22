@@ -81,73 +81,7 @@ We want to understand how much the people in a movie contribute to its financial
 
 We're only looking at actors who have been in more than 10 movies. This helps us exclude one-time wonders and makes sure our findings are more typical of the movie industry. It's possible that actors with fewer movies can affect a movie's financial success, but these cases might not be as accurate or typical. By sticking to actors who have more experience, we can feel more confident about the conclusions we draw about what leads to financial success in the movie industry.
 
-<table>
-  <tr>
-    <th>Variable</th>
-    <th>coef</th>
-    <th>std err</th>
-    <th>t</th>
-    <th>P>|t|</th>
-    <th>[0.025</th>    <th>0.975]</th>
-  </tr>
-  <tr>
-    <td>Cate Blanchett</td>
-    <td>107800000.0</td>
-    <td>25000000.0</td>
-    <td>4.305</td>
-    <td>0.000</td>
-    <td>58700000.0</td>
-    <td>157000000.0</td>
-  </tr>
-  <tr>
-    <td>Seann William Scott</td>
-    <td>83170000.0</td>
-    <td>23300000.0</td>
-    <td>3.571</td>
-    <td>0.000</td>
-    <td>37500000.0</td>
-    <td>129000000.0</td>
-  </tr>
-  <tr>
-    <td>budget</td>
-    <td>81760000.0</td>
-    <td>3310000.0</td>
-    <td>24.671</td>
-    <td>0.000</td>
-    <td>75300000.0</td>
-    <td>88300000.0</td>
-  </tr>
-    <tr>
-    <td>James Franco</td>
-    <td>74500000.0</td>
-    <td>24600000.0</td>
-    <td>3.026</td>
-    <td>0.003</td>
-    <td>26200000.0</td>
-    <td>123000000.0</td>
-  </tr>
-  <tr>
-    <td>Johnny Depp</td>
-    <td>60650000.0</td>
-    <td>21000000.0</td>
-    <td>2.890</td>
-    <td>0.004</td>
-    <td>19500000.0</td>
-    <td>102000000.0</td>
-  </tr>
-  <tr>
-    <td>Anna Faris</td>
-    <td>58480000.0</td>
-    <td>22600000.0</td>
-    <td>2.593</td>
-    <td>0.010</td>
-    <td>14200000.0</td>
-    <td>103000000.0</td>
-  </tr>
-
-</table>
-
-| Actor | coefficient (in millions) | p-value |
+| Actor | coefficient (in million $) | p-value |
 |-------|--------------------------|---------|
 | Cate Blanchett | 107.8 | 0.000 |
 | Seann William Scott | 83.2 | 0.000 |
