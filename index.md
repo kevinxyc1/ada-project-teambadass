@@ -169,7 +169,7 @@ We didn't use budget as a matching variable in this analysis because it's probab
 We don't have data on how budgets were specifically used for each movie, but we think a lot of the budget probably goes towards casting. It might be more expensive to put together a cast mostly from one community, which wouldn't be relevant for our analysis of how the cast affects revenue.
 
 ### Cast Summary
-We've learned a lot about how a movie's cast affects its box office revenue through our analysis. We found that actors can have a big impact on how well a movie does financially, which we saw in our linear regression model. We also discovered that actors tend to work together in groups called "communities" and that movies with casts made up of actors from a single community tend to make more money than movies with actors from multiple communities. It looks like the saying "there's strength in numbers" really does apply to box office success!
+We've learned a lot about how a movie's cast affects its box office revenue through our analysis. We found that actors can have a big impact on how well a movie does financially, which we saw in our linear regression model. We also discovered that actors tend to work together in communities and that movies with casts made up of more actors from a single community tend to make more money than movies with actors from multiple communities. It looks like the saying "there's strength in numbers" really does apply to box office success!
 
 -----------------------
 
