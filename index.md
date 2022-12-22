@@ -172,7 +172,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
 <style>
   img#communities_img {
     display: block;
-    margin-left: 0 auto;
+    margin-left: 20;
     width: 650px;
     height: 557px;
   }
