@@ -171,7 +171,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
   }
 </script>
 
-<button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px; left-margin: 250px;" onclick="swapImage()">Average revenue on/off</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px; margin-left: 250px;" onclick="swapImage()">Average revenue on/off</button>
 
 
 
