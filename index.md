@@ -196,6 +196,8 @@ In the context of analyzing the impact of actors on movie revenue, network analy
   }
 </style>
 
+<img id="flavour2_img" src="assets/img/flavour2_img.png" alt="Description of image 1">
+
 <script>
   function swapImage3(newImage) {
     var image = document.getElementById("flavour2_img");
