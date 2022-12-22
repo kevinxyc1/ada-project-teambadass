@@ -156,10 +156,6 @@ In the context of analyzing the impact of actors on movie revenue, network analy
     width: 500px;
     height: 500px;
   }
-
-  button {
-    text-align: center;
-  }
 </style>
 
 <img id="communities_img" src="assets/img/communities.png" alt="Description of image 1">
@@ -175,7 +171,7 @@ In the context of analyzing the impact of actors on movie revenue, network analy
   }
 </script>
 
-<button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; margin: 4px 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px;" onclick="swapImage()">Average revenue on/off</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; margin: 4px 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px; display: block;" onclick="swapImage()">Average revenue on/off</button>
 
 
 
