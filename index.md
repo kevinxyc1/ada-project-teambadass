@@ -36,7 +36,6 @@ To gain more insight we ask if the best release month differs for different genr
 
 We repeat our idependet t-test analysis from beforehand to subsets of the data corresponding to the different genres. As a result we obtain the months which represent the max mean per genre which are all statistical significantly different in comparison to the rest. Since we obtain different months for different genre, we conclude that it is important to know what kind of movie we are dealing with before deciding on an optimal release date. For example for comedy movies June is the month with the highest mean revenue while for romance films November has the highest mean in revenue.
 
-
 -----------------------
 
 ## Diversity
