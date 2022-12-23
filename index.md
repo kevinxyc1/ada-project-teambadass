@@ -67,12 +67,10 @@ As you can see from fig. 1.1, the ethnicity score in movies has increased in rec
 
 We grouped our data into five based on their ethnicity score to further investigate the effect; the results are shown in fig. 1.2. In the search for the best interval, we found an ethnicity score between (0.4 - 0.6] to be the most lucrative considering revenue maximization when we look at the mean revenue in our data set. However, overlapping 95% CI between the four highest intervals prevents us from concluding the best in general. On the other side, we can end that the worst performing interval is between (0 – 0.2], which indicates that ethnicity score is something you should consider planning your next movie, so you are not unlucky and end up in this group. As long as you stay out of this interval, it does not seem like the ethnicity score should limit your movie box revenue. However, we observe a greater variety in revenue among the movies with an ethnicity score above 0.6. The interval (0.6 – 0.8] differs the most, with great potential earnings and the risk of not performing as well as expected. 
 
-
 #### Fig. 1.2: Revenue - Overall
 <iframe src="assets/plot/revenue_ethnicity_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 We also looked at how the effect of ethnicity has changed over time. Since the primary goal of this analysis is to make a recipe for a movie´s success, we looked at recent movies, starting with movies after the year 2000. As we noticed earlier, having an ethnicity score above 0.2 seems necessary, but when did this become important? From fig. 1.3 we can observe a significant difference between movies with ethnicity scores above 0.2 (treated group) and the movies with ethnicity scores below or equal to 0.2 (control group) after 2007. This indicates that it is in recent years that this has become a hot topic. Increasing the threshold to 0.3 gives almost the same result but with a slight overlap in 95% CI after 2011. Increasing the threshold makes the difference between treated and controlled less significant.
-
 
 
 #### Fig. 1.3: Revenue - Over Time
