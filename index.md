@@ -158,7 +158,7 @@ Regardless, it's still interesting to see how actors are connected and how they 
 <style>
   img#flavour2_img {
     display: block;
-    margin-left: 100px;
+    margin-left: 70px;
     width: 600px;
     height: 600px;
   }
