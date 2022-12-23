@@ -15,7 +15,6 @@ The global film industry is a **$100 billion worth industry**. There is a vast p
 We will be using the CMU Movie Summary Corpus which contains data on the revenue of **8 401 movies**. We will analyze this data to create a recipe for a successful movie.
 
 
-
 ### Goal:
 
 In our initial analysis, we define the success of a movie in terms of box office revenue. To create a recipe for the production of a successful film, we have limited ourselves to five main research questions:
