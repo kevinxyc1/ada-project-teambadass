@@ -264,7 +264,7 @@ function showFrame(frameId) {
 <!-- Create the iframes -->
 <iframe class="toggle-frame" src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="positive" style="display: none;">positive barplot</iframe>
 <iframe class="toggle-frame" src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="negative" style="display: block;">negative barplot</iframe>
-<iframe class="toggle-frame" src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline" style="display: none;">violent barplot</iframe>
+<iframe class="toggle-frame" src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative"  id="violent" style="display: none;">violent barplot</iframe>
 
 
 From the scatterplot, we see that 
