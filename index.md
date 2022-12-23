@@ -130,7 +130,7 @@ Our graph has 61 actors and 256 connections. In the next section, we'll take a c
     display: block;
     margin-left: 60px;
     width: 600px;
-    height: 500px;
+    height: 500px;git 
   }
 </style>
 
