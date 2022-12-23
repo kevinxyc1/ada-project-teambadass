@@ -34,7 +34,7 @@ We dive into the data to discover if certain months are more likely to lead to b
 
 <iframe src="assets/plot/genre-plot-sm.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-Now let's delve into the specific release months that tend to bring in the most revenue for each genre. Adventure movies tend to perform best in May, while Crime fiction, comedy, drama, romantic comedy, and thriller films see their highest mean revenues in June. For action, action/adventure, and adventure movies, May is the month with the highest mean revenue. On the other hand, romance films tend to perform best in November, and indie films see their highest mean revenues in December. It's clear that the best month for a movie's release depends on its genre, so it's crucial to consider this factor when deciding on a release date. 
+Now let's delve into the specific release months that tend to bring in the most revenue for each genre. Adventure and action movies tend to perform best in May, while crime fiction, comedy, drama, romantic comedy, and thriller films see their highest mean revenues in June. On the other hand, romance films tend to perform best in November, and indie films see their highest mean revenues in December. It's clear that the best month for a movie's release depends on its genre, so it's crucial to consider this factor when deciding on a release date. 
 
 -----------------------
 
