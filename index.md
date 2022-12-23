@@ -70,7 +70,7 @@ We also looked at how the effect of ethnicity has changed over time. Since the p
 
 ### 2. Gender
 
-We observed an increase in the fraction of females over time. However, as seen in fig. 2.1, a high fraction of females tends to generate lower revenue. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 07, which indicates that more data is needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be that it took time for the audience to digest this change. 
+We observed an increase in the fraction of females over time. However, as seen in fig. 2.1, a high fraction of females tends to generate lower revenue. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 0.7, which indicates that more data is needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be that it took time for the audience to digest this change. 
 
 
 #### Fig. 2.1: Movie Distribution
@@ -81,7 +81,8 @@ To obtain better insight into a movie's best fraction of females, we divided the
 #### Fig. 2.2: Revenue - Overall
 <iframe src="assets/plot/revenue_female_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-Until now have been looking at the overall impact fraction of females has on revenue. This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. As you can see in fig. 2.3 the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. However, we observe a significantly better revenue for the control group with a threshold of 0.5 after 2009. This indicates that a fraction of females between 0.4 and 0.5 may be the best choice if you plan to make your next movie successful.
+Until now have been looking at the overall impact fraction of females has on revenue. This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. As you can see in fig. 2.3 the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. However, we observe a significantly better revenue for the control group with a threshold of 0.5 after 2009. This indicates that a fraction of females between 0.4 and 0.5 may be avoided as they have a significantly worse revenue.
+
 
 #### Fig. 2.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
