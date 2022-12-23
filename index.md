@@ -225,10 +225,9 @@ To make it a fair measure for all movies with various plot length, we will take 
 ### Linear Regression
 To commence the analysis, we perform linear regression of positive, negative, violent word proportion with respect to revenue and discover if there is any linear relationship.
 
-
-<iframe src="assets/plot/revenue_negative_bar.html" width="350px" height="340px" frameborder="0" position="relative">positive barplot</iframe>
-<iframe src="assets/plot/negative_scatter.html" width="400px" height="330px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
-<iframe src="assets/plot/violent_scatter.html" width="750px" height="330px" frameborder="0" position="relative" display="inline">violent scatterplot</iframe>
+<iframe src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative">positive barplot</iframe>
+<iframe src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
+<iframe src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline">violent scatterplot</iframe>
 
 From the scatterplot, we see that 
 - there is a negative linear relationship between positive word proportion and revenue. 
