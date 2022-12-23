@@ -19,26 +19,22 @@ So grab your popcorn and join us as we explore the data and see what insights we
 
 ## When to strike gold: the perfect release date for your movie
 
-To begin with, we aim to investigate the influence of a movie's release date on its box office revenue. Since our goal is to create a recipe for successfull movies in the future, we will focus on determining the best time of a year to release a movie by comparing the mean revenue of the different months. To improve our analysis and include the wider time span of the data we adjust for inflation.
+To begin with, we aim to investigate the influence of a movie's release date on its box office revenue. Since our goal is to create a recipe for successfull movies in the future, we will focus on determining the best time of a year to release a movie by comparing the mean revenue of the different months. But with data spanning multiple decades, we knew we had to account for inflation to get an accurate picture. So let's dive in and see what the data reveals about the perfect release date for a blockbuster movie.
 
 #### Inflation-Adjusted Box Office Revenue: Can Older Movies Compete?
 
-We start by analysing the correlation between the release year and the revenue. Plotting the correlation for the original data and the adjusted data we observe the need for adjusting for inflation since the correlation is clearly weakened. This observation is also supported by a Spearman Correlation Coefficient of 0.01 with a p-value of 0.4. 
+Our analysis shows that there is a clear need to adjust for inflation when looking at the correlation between release year and revenue. In fact, the Spearman Correlation Coefficient of 0.01 and p-value of 0.4 reveal that there is little to no correlation between the two variables after correcting for inflation. But don't worry, we're not done yet! Next, we'll delve into the specific months of the year and see if there are any standout performers in terms of revenue. Stay tuned!
 
 <iframe src="assets/plot/inflation-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 #### What's the Best Month to Release a Movie? 
 
-We continue by analysing the correlation between the month of the release of a movie and its revenue. Therefore, we group the data into the different release months and check if there a significants differences between these means. To check for significant differences we perform a One-way ANOVA test. Since we obtain a p-value < 0.05 we reject the null hypothesis that the means for each month is equal and we continue our analysis to find the best month in terms of revenue.
-
-By performing an idependent t-test to check for the differences between a month compared to the rest we can observe that most of the months have statistical significant different means. In particular, we obtain June as the month with the highest mean and the lowest p-value. 
-
-To gain more insight we ask if the best release month differs for different genres. Note that we limit ourselves to the ten most common genre for the sake of clarity. 
+We dive into the data to discover if certain months are more likely to lead to blockbuster hits. By analyzing the correlation between the month of release and revenue, we find that most months have statistically significant differences in mean revenue. In particular, June emerges as the clear winner with the highest mean and lowest p-value when performing a One-way ANOVA test. But is June the best month for all genres? We take a closer look at the top ten most common genres and find that the most promising month varies for each. Get ready to mark your calendars and plan for box office success!
 
 
 <iframe src="assets/plot/genre-plot-sm.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-We repeat our independet t-test analysis from beforehand to the subsets of the data corresponding to the different genres. We filter the result for months that have a statistical significantly different mean than the rest and represent the maximum in terms of mean revenue per genre. Since we obtain different months for different genre, we conclude that it is important to know what kind of movie we are dealing with before deciding on an optimal release date. For example for adventure movies May is the month with the highest mean revenue while for romance films November has the highest mean in revenue.
+Now let's delve into the specific release months that tend to bring in the most revenue for each genre. Adventure movies tend to perform best in May, while Crime fiction, comedy, drama, romantic comedy, and thriller films see their highest mean revenues in June. For action, action/adventure, and adventure movies, May is the month with the highest mean revenue. On the other hand, romance films tend to perform best in November, and indie films see their highest mean revenues in December. It's clear that the best month for a movie's release depends on its genre, so it's crucial to consider this factor when deciding on a release date. 
 
 -----------------------
 
