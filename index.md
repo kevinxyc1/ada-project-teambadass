@@ -306,7 +306,7 @@ So, without further ado, here's our recipe for the ultimate box office hit:
 - Aim for an ethnicity score above 0.33 to attract a diverse audience
 - Keep the fraction of females in your cast below 0.33 to appeal to a wider audience
 - Consider the genre of your movie when choosing the best release month. Action, action/adventure, and adventure movies may do best in May, while crime fiction, comedy, drama, romantic comedy, and thrillers may perform best in June. Romance films may fare well in November and indie films may do well in December.
-- Consider the combination of actors in the movie cast, as movies with the majority of actors from a specific community have a big impact on box office revenue.
+- The right combination of actors in your movie cast can make a big impact on its box office success. Keep in mind that having a majority of actors from a specific community can significantly affect your revenue.
 - Don't be afraid to add a dash of negativity to your plot - it might just be the secret ingredient that sets your movie apart. And last but not least, don't forget to season your recipe with a generous helping of violence - it could give your movie the edge it needs to be a blockbuster.
 
 With these ingredients in hand, you're well on your way to creating a box office hit that will have audiences coming back for seconds. Happy cooking!
