@@ -120,7 +120,7 @@ To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This
 
 -----------------------
 
-## Cast
+## Star Power: The Influence of Cast on Movie Revenue
 Ever wonder how much of a role the cast of a movie plays in its financial success? In this section, we'll delve into the relationship between a movie's cast and its box office revenue. We'll analyze the impact of individual actors on a film's financial performance. We'll also conduct network analysis to evaluate the roles of actor combinations in generating revenue. Whether you're a fan of A-list celebrities or indie darlings, let's find out if the cast really does make a difference in box office success.
 
 ### Who's the Biggest Box Office Draw? Analyzing the Impact of Actors on Revenue
