@@ -131,7 +131,7 @@ Our graph has 61 actors and 256 connections. In the next section, we'll take a c
 <style>
   img#communities_img {
     display: block;
-    margin-left: 60px;
+    margin-left: 50px;
     width: 600px;
     height: 500px;git 
   }
@@ -161,7 +161,7 @@ Regardless, it's still interesting to see how actors are connected and how they 
 <style>
   img#flavour2_img {
     display: block;
-    margin-left: 70px;
+    margin-left: 50px;
     width: 600px;
     height: 600px;
   }
