@@ -17,17 +17,17 @@ So grab your popcorn and join us as we explore the data and see what insights we
 
 -----------------
 
-## Release Date:
+## When to strike gold: the perfect release date for your movie
 
 To begin with, we aim to investigate the influence of a movie's release date on its box office revenue. Since our goal is to create a recipe for successfull movies in the future, we will focus on determining the best time of a year to release a movie by comparing the mean revenue of the different months. To improve our analysis and include the wider time span of the data we adjust for inflation.
 
-#### Release year and adjusting for inflation
+#### Inflation-Adjusted Box Office Revenue: Can Older Movies Compete?
 
 We start by analysing the correlation between the release year and the revenue. Plotting the correlation for the original data and the adjusted data we observe the need for adjusting for inflation since the correlation is clearly weakened. This observation is also supported by a Spearman Correlation Coefficient of 0.01 with a p-value of 0.4. 
 
 <iframe src="assets/plot/inflation-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-#### Release month 
+#### What's the Best Month to Release a Movie? 
 
 We continue by analysing the correlation between the month of the release of a movie and its revenue. Therefore, we group the data into the different release months and check if there a significants differences between these means. To check for significant differences we perform a One-way ANOVA test. Since we obtain a p-value < 0.05 we reject the null hypothesis that the means for each month is equal and we continue our analysis to find the best month in terms of revenue.
 
@@ -42,7 +42,7 @@ We repeat our independet t-test analysis from beforehand to the subsets of the d
 
 -----------------------
 
-## Diversity
+## Spice Up Your Movie Recipe: The Importance of Diversity
 
 To analyze the effect diversity has on movie box office revenue, we first had to estimate the diversity of each movie. There are several ways to assess the diversity in a film which may lead to different results than we will present. The first thing we had to do was to figure out a way to estimate diversity based on our data. We decided to use ethnicity and gender as the estimates for the diversity of each movie. These two aspects will give a partial picture of diversity's effect on a movie's success. The next step was to give each film a “score of ethnicity” and a “score of gender.” We observed a high correlation between the number of actors in a film and the movie's box office revenue. It was, therefore, essential to find a score that considered the number of actors. To estimate ethnicity, we introduced the “ethnicity score,” which counts the number of ethnicities present in a movie and divides it by the total number of actors. We also considered different approaches, such as giving higher weight to rare ethnicities, but concluded that our approach would suffice for our analysis, which is to look at the effect of diversity on revenue and not to get a complete insight into the diversity in each movie. To estimate gender, we introduced the “fraction of females,” computed by counting the number of female actors and dividing it by the total number of actors in that film.
 
@@ -230,38 +230,34 @@ Our analysis shows that movies with a majority of actors from a specific communi
 
 We didn't use budget as a matching variable in this analysis because it's probably closely related to the cast. If we used budget as a matching variable, it might be hard to see the independent effect of the cast on revenue. That being said, budget is still an important factor that can affect a movie's production value and overall appeal to audiences. For example, a movie with a high budget might make more money because it has more money for marketing and a wider distribution.
 
-### Cast Summary
-We've learned a lot about how a movie's cast affects its box office revenue through our analysis. We found that actors can have a big impact on how well a movie does financially, which we saw in our linear regression model. We also discovered that actors tend to work together in communities and that movies with casts made up of more actors from a single community tend to make more money than movies with actors from multiple communities. It looks like the saying "there's strength in numbers" really does apply to box office success!
-
 -----------------------
 
 ## Runtime: The Sweet Spot
-Are you ready to find out if a movie's runtime has the power to make or break its box office success? Let's dive into the data and see if longer or shorter movies come out on top. But first, let's take a look at the distribution of runtime across all movies and see what the most common range is.
+Are you ready to find out if a movie's runtime can make or break its box office success? From epics to quick hits, we'll delve into the data to discover whether longer or shorter films come out on top. But before we get started, let's take a quick look at the distribution of runtime across all movies and see which range is most common.
 
 <iframe src="assets/plot/crazy_runtime_plot.html" width="750px" height="630px" frameborder="0" position="relative">Runtime Histogram</iframe>
 
-The first step to discover the relationship is through linear regression between runtime and revenue. From our model, there is a slight positive linear relationship between runtime and revenue. However from the regression analysis, the R squared value (0.035) is too small to justify the dependency between runtime and revenue. We also see that movie with runtime between 80-120 minutes have similar distribution of revenue and movies with runtime less than 80 minutes generate less revenue (highet revenue is below $400000000). Thus we can raise the question that if 80 minute could be a threshold for movie's revenue performance and we will address it in the next section.
+It looks like most movies fall within the 80-120 minute range, with a slight skew towards the longer end of the spectrum.
+
+Now that we've looked at the distribution of runtime across all movies, let's see if longer or shorter movies come out on top in terms of box office success. At first glance, it looks like there might be a slight positive relationship between the two. But when we dig a little deeper using linear regression, we see that this relationship isn't strong enough to draw any solid conclusions. In fact, the R-squared value is pretty low, meaning that runtime isn't a strong predictor of box office success.
+
+However, when we break things down by runtime intervals, we see that movies with runtimes between 80-120 minutes seem to generate larger revenue compared to the movies with runtime less than 80 minutes.  This raises the question: is 80 minutes some kind of threshold for box office performance? We'll explore this further in the next section.
 
 ### Does it hurt if runtime is too short?
-We define short movie to have runtime < 80min and other (non-short) movie to have runtime >= 80min. Here we examine the histogram overlaying the revenue between two classes of movies. We see that all short movies in the dataset does not exceed 225 million and there are quite a few non-short movies with very high revenues.
+It seems that shorter movies may have a harder time raking in the big bucks. In fact, our analysis shows that movies with a runtime under 80 minutes tend to generate significantly less revenue than their longer counterparts. But don't worry, it's not all bad news for short films. While it may be tougher for them to reach blockbuster status, there are still shorter movies that manage to perform well at the box office. So, the takeaway here is that while runtime alone may not be a make-or-break factor for a movie's success, it's definitely something to consider when trying to craft a recipe for box office gold.
 
 <iframe src="assets/plot/short_vs_nonshort.html" width="750px" height="630px" frameborder="0" position="relative">short vs nonshort Histogram</iframe>
 
-Then we perform independent t-test between revenues of short and non-short movies. the t-test gives us a small p-value (<< 0.05), which indicates a statistically significant difference between the samples. Further, the mean difference tells us that short movies (< 80min) generally generates less revenue than non-short (>=80min) movies. We can conclude that movies should not be too short as short movies have **54.8%** less revenue than non-short movies.
+It's clear from our analysis that shorter movies tend to struggle at the box office compared to their longer counterparts. In fact, our independent t-test showed a statistically significant difference in revenue between short and non-short movies, with short movies earning an average of 53.9% less. So, if you're thinking about making a movie, it might be best to aim for a runtime of at least 80 minutes to give your film the best chance at box office success.
+
 
 ### Are blockbuster movies generally longer in runtime?
-To answer this question, we define blockbusters as movies with revenue >= 400 million USD and non-blockbusters as movies with revenue < 400 million USD.
-
-We perform independent t-test between runtime between blockbuster and non-blockbuster movies which gives us a small p-value (<< 0.05), which indicates a statistically significant difference between the samples. Further, the mean difference tells us that the blockbuster runtime is generally longer than non-blockbuster. We can conclude that longer runtime are more successful, as **blockbuster movies have 10.05% longer runtime than non-blockbuster movies**.
+Are longer movies really the key to box office success? Let's take a closer look at the data to find out. We found that when comparing short movies to non-short movies, the latter tends to generate significantly more revenue. In fact, short movies make on average 53.9% less revenue than non-short movies. But wait, there's more! When we compared the runtime of blockbuster movies (those with a revenue of $400 million or more) to non-blockbusters, we found that blockbusters tend to have longer runtimes on average. In fact, blockbusters have a runtime that is 10.05% longer than non-blockbusters. It seems that there may be some truth to the idea that longer movies have an advantage at the box office. However, it's important to keep in mind that this is just a tiny piece of the puzzle. There are many other factors that can impact a movie's success, and it's likely that the relationship between runtime and revenue is not a simple one.
 
 -----------------------
 
-## Plot Summary
-In this analysis, we decide to look into plot summary and specifically if words with positive, negative and violent connotations have an impact on a movie's box office revenue.
-To make it a fair measure for all movies with various plot length, we will take the proportion of positive, negative, violent words in the plot so that the standard will be normalized from 0 to 1.
-
-### Linear Regression
-To commence the analysis, we perform linear regression of positive, negative, violent word proportion with respect to revenue and discover if there is any linear relationship.
+## The Power of Words: How Movie Plot Sentiment Affects Box Office Success
+In this section, we delve into the power of words in movie plot summaries and how they can impact a film's box office success. By analyzing the proportion of positive, negative, and violent words in plot summaries, we can gain insights into how movie studios can craft engaging and successful storylines. Join us as we explore the relationship between sentiment analysis and revenue!
 
 
 <script>
@@ -292,33 +288,36 @@ function showFrame(frameId) {
 <iframe class="toggle-frame" src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative"  id="violent" style="display: none;">violent barplot</iframe>
 
 
-From the scatterplot, we see that
-- there is a negative linear relationship between positive word proportion and revenue. 
-- In contrast, there is a positive linear relationship between negative word proportion and revenue. 
-- There is also a positive linear relationship between violent word proportion and revenue.
-However from our regression analysis, the R squared value is too small to justify the dependency between all sentiments and revenue.
-We see a opposing relationship between positive and negative plots and we will discover if more positive plot or more negative plot can boost the revenue in the following section.
+From our bar plots, it appears that movies with a higher proportion of negative words in their plot summary tend to have higher revenues compared to movies with a higher proportion of positive words. One potential reason for this could be that negative themes and storylines often generate more interest and tension, which can draw in larger audiences. Similarly, movies with a higher proportion of violent words also tend to have higher revenues, possibly because violent content can also be seen as more exciting and engaging. It's important to note that while there is a correlation between these plot characteristics and box office success, this does not necessarily mean that including more negative or violent elements in a movie's plot will guarantee higher revenues. Other factors, such as the quality of the movie, the acting, and the overall production value, also play a significant role in a movie's success.
 
-### More positivity or more negativity?
-We continue our analysis that if plots with more positive word proportions will generate more revenues than those with more negative word proportions.
+In conclusion, our analysis of plot summaries has shown that movies with more negative plot are more successful, with a 45.3% increase in revenue compared to movies with more positive plot. This finding highlights the importance of considering the sentiment of a movie's plot when striving for box office success. So next time you're planning a blockbuster hit, don't be afraid to inject a little bit of negativity into your story.
 
-By performing independent t-test between revenues of more positive and more negative plot movies, it gives us a small p-value which indicates a statistically significant difference between the samples.
-Further, the mean difference tells us that movies with more positive plot generally has less revenue than movies with more negative plot.
+### Sentiment Showdown: Comparing the Plot Summaries of Blockbusters and Non-Blockbusters
+Blockbuster movies appear to have a preference for negative and violent plot elements, as indicated by the higher proportion of negative and violent words in their summaries. This is supported by the small p-values and the significant mean differences found in our independent t-tests. In comparison, blockbusters tend to have a lower proportion of positive words in their summaries compared to non-blockbusters. These findings suggest that incorporating more negative and violent elements into a movie's plot may increase its chances of becoming a blockbuster, while a more positive plot may hinder its box office success. However, it's important to note that these results should be interpreted with caution, as other factors may contribute to a movie's box office success.
 
-We can conclude that movies with more negative plot are more successful, as movies with more negative plot have **45.3%** more revenue than movies with more positive plot.
 
-### Blockbuster's special sentiments
-So how do the sentiments look on all blockbusters compared to non-blockbusters.
-(Note: we previously defined blockbusters as movies with revenue >= 400 million USD and non-blockbusters as movies with revenue < 400 million USD.)
-To investigate this question, we perform independent t-tests between positive/negative/violent word porportions of blockbusters and non-blockbusters and present the results below.
-
-For all independent t-tests, they give us a small p-value, which indicates a statistically significant difference between the samples.
-- Positive: blockbuster movies generally has smaller positive word proportion in summary than non-blockbuster. We can conclude that less positive plot components are more successful, as blockbuster movies have **10.2% less positive word usage** than non-blockbuster movies.
-- Negative: blockbuster movies generally has higher negative word proportion in summary than non-blockbuster. We can conclude that more negative plot components are more successful, as blockbuster movies have **12.4% more negative word proportion** than non-blockbuster movies.
-- Violent: blockbuster movies generally has higher violent word proportion in summary than non-blockbuster. We can conclude that more violent plot components are more successful as blockbuster movies have **36.9% higher violent word proportion** than non-blockbuster movies.
 
 -----------------------
 
-## Conclusion & Our recipe
+## The secret recipe for box office success: A data-driven guide
+
+Congratulations, you've reached the end of our data-driven guide to creating the ultimate box office hit! Now it's time to put our findings into action and cook up a recipe for success.
+
+But before you start gathering your ingredients, it's important to remember that just like in cooking, the success of your movie will depend not only on the individual ingredients, but also on how they all work together. Adding a superstar actor like Johnny Depp to your cast might sound like a no-brainer, but it's also important to consider how that will affect the rest of the cast and the overall direction of the film. Similarly, changing the genre of your movie might mean that you need to reevaluate the best release date to maximize your revenue.
+
+So, without further ado, here's our recipe for the ultimate box office hit:
+
+- Aim for an ethnicity score above 0.33 to attract a diverse audience
+- Keep the fraction of females in your cast below 0.33 to appeal to a wider audience
+- Consider the genre of your movie when choosing the best release month.
+- Action, action/adventure, and adventure movies may do best in May, while crime fiction, comedy, drama, romantic comedy, and thrillers may perform best in June. Romance films may fare well in November and indie films may do well in December.
+- Don't be afraid to add a dash of negativity to your plot - it might just be the secret ingredient that sets your movie apart. And last but not least, don't forget to season your recipe with a generous helping of violence - it could give your movie the edge it needs to be a blockbuster.
+
+With these ingredients in hand, you're well on your way to creating a box office hit that will have audiences coming back for seconds. Happy cooking!
+
+
+<img src="assets/img/Torkel.png" height=600px width=720px class="center"/>
+
+
 
 -------------
