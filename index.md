@@ -227,11 +227,11 @@ To commence the analysis, we perform linear regression of positive, negative, vi
     display: inline-block;
   }
 </style>
-<iframe src="assets/plot/positive_scatter.html" width="325px" height="330px" frameborder="0" position="relative">positive scatterplot</iframe>
-<iframe src="assets/plot/revenue_positive_bar.html" width="325px" height="330px" frameborder="0" position="relative">positive barplot</iframe>
+<iframe src="assets/plot/positive_scatter.html" width="400px" height="340px" frameborder="0" position="relative">positive scatterplot</iframe>
+<iframe src="assets/plot/revenue_positive_bar.html" width="340px" height="340px" frameborder="0" position="relative">positive barplot</iframe>
 
 
-<iframe src="assets/plot/negative_scatter.html" width="750px" height="330px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
+<iframe src="assets/plot/negative_scatter.html" width="400px" height="330px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
 <iframe src="assets/plot/violent_scatter.html" width="750px" height="330px" frameborder="0" position="relative" display="inline">violent scatterplot</iframe>
 
 From the scatterplot, we see that 
