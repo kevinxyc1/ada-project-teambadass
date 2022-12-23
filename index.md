@@ -163,7 +163,7 @@ Our graph has 61 actors and 256 connections. In the next section, we'll take a c
   }
 </script>
 
-<button style="width: 30%; margin-left: 240px;" onclick="swapImage()">Average revenue on/off</button>
+<button class="button" style="width: 30%; margin-left: 240px;" onclick="swapImage()">Average revenue on/off</button>
 
 
 We used the Louvain method to split the network of actors into six different communities based on how they're connected through movies. This shows us that there are some actors who tend to work together more often. When we looked closer, we saw that the average revenue for actors in each community varies. Some actors seem to do especially well at the box office. However, we also saw that there was no significant difference in average revenue between the communities, with one exception. This could mean that the community an actor belongs to doesn't necessarily have a big impact on how much money their movies make.
@@ -189,9 +189,9 @@ Regardless, it's still interesting to see how actors are connected and how they 
   }
 </script>
 
-<button style="margin: 8px 0; width: 20%; margin-left: 130px; margin-right: 5px" onclick="swapImage3('assets/img/flavor_graph_different_edges.png')">All connections</button>
-<button style="width: 20%; margin-right: 5px;" onclick="swapImage3('assets/img/community_graph.png')">Community</button>
-<button style="width: 20%;" onclick="swapImage3('assets/img/non_community_edges.png')">Non-community</button>
+<button class="button" style="margin: 8px 0; width: 20%; margin-left: 130px; margin-right: 5px" onclick="swapImage3('assets/img/flavor_graph_different_edges.png')">All connections</button>
+<button class="button" style="width: 20%; margin-right: 5px;" onclick="swapImage3('assets/img/community_graph.png')">Community</button>
+<button class="button" style="width: 20%;" onclick="swapImage3('assets/img/non_community_edges.png')">Non-community</button>
 
 We want to know if there's a difference in revenue when a movie's cast is mostly made up of actors from one community versus actors from a bunch of different communities. To do this, we'll look at the patterns of collaboration within and between communities and see how they affect revenue.
 
