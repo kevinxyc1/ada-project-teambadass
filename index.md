@@ -10,18 +10,10 @@ use-site-title: true
 
 The global film industry is a **$100 billion worth industry**. There is a vast potential to earn money, and the producers are willing to sacrifice considerable costs to become a movie success. Pirates of the Caribbean: On Stranger Tides, the most expensive film, cost $379 million. With such an amount at your disposal, you may wonder how you should spend the money. Should you use them to get one of the biggest movie stars in your cast? For many, this may be tempting. One of the most famous actors, Tom Cruise, was rewarded $100,000,000 for his performance in Top Gun: Maverick. But was it worth it? Or could the money be better spent? 
 
-### The Data Used:
-We will be using the CMU Movie Summary Corpus which contains data on the revenue of **8 401 movies**. We will analyze this data to create a recipe for a successful movie.
+## Introduction
+Welcome to our interactive data story on the factors that influence box office success! We'll be exploring a range of questions about what drives a movie's financial performance. From analyzing the impact of release dates and the makeup of a film's cast, to examining the role of plot themes and movie length, we'll dive into the data to uncover the secrets of box office success.
 
-### Goal:
-
-In our initial analysis, we define the success of a movie in terms of box office revenue. To create a recipe for the production of a successful film, we have limited ourselves to five main research questions:
-
-* Does the movie release date have a significant impact on the success of a film, and if so, what is the optimal release date concerning the time of the year? Subsequently, the question arises whether this result differs for different genres.
-* How do the gender ratio and the fraction of ethnicities in the cast affect the success of a movie?
-* Do certain actors have a significant positive or negative impact on the success of a movie?
-* Is the length of a movie related to its success, and if so, in what way?
-* Is the use of negatively connoted words, positively connoted words, and words related to violence in the movie plot associated with the success of the movie?
+So grab your popcorn and join us as we explore the data and see what insights we can uncover. And don't forget to try out the interactive visualizations – you can play around with the data and see what factors have the biggest impact on a movie's success. Let's get started!
 
 -----------------
 
