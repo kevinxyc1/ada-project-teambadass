@@ -231,8 +231,8 @@ To commence the analysis, we perform linear regression of positive, negative, vi
     display: inline-block;
   }
 </style>
-<iframe src="assets/plot/negative_scatter.html" width="400px" height="340px" frameborder="0" position="relative">positive scatterplot</iframe>
-<iframe src="assets/plot/revenue_negative_bar.html" width="400px" height="340px" frameborder="0" position="relative">positive barplot</iframe>
+<iframe src="assets/plot/negative_scatter.html" width="350px" height="340px" frameborder="0" position="relative">positive scatterplot</iframe>
+<iframe src="assets/plot/revenue_negative_bar.html" width="350px" height="340px" frameborder="0" position="relative">positive barplot</iframe>
 
 
 <iframe src="assets/plot/negative_scatter.html" width="400px" height="330px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
