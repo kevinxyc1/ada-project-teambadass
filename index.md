@@ -238,11 +238,6 @@ To commence the analysis, we perform linear regression of positive, negative, vi
     display: inline-block;
     font-size: 11px;
   }
-
-  /* Style the iframes */
-  iframe {
-    display: none;  /* Hide all iframes by default */
-  }
 </style>
 
 <!-- Create the buttons -->
