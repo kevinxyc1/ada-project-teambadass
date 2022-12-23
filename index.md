@@ -238,15 +238,33 @@ To make it a fair measure for all movies with various plot length, we will take 
 ### Linear Regression
 To commence the analysis, we perform linear regression of positive, negative, violent word proportion with respect to revenue and discover if there is any linear relationship.
 
+
+<script>
+function showFrame(frameId) {
+  // Get all iframes with the toggle-frame class
+  var frames = document.getElementsByClassName('toggle-frame');
+
+  // Hide all iframes with the toggle-frame class
+  for (var i = 0; i < frames.length; i++) {
+    frames[i].style.display = 'none';
+  }
+
+  // Show the selected iframe
+  var frame = document.getElementById(frameId);
+  frame.style.display = 'block';
+}
+</script>
+
+
 <!-- Create the buttons -->
-<button class="button" onclick="showFrame('positive')">Positive</button>
-<button class="button" onclick="showFrame('negative')">Negative</button>
-<button class="button" onclick="showFrame('violent')">Violent</button>
+<button class="button" style="margin: 8px 0; width: 20%; margin-left: 130px; margin-right: 5px" onclick="showFrame('positive')">Positive</button>
+<button class="button" style="width: 20%; margin-right: 5px;" onclick="showFrame('negative')">Negative</button>
+<button class="button" style="width: 20%;" onclick="showFrame('violent')">Violent</button>
 
 <!-- Create the iframes -->
-<iframe src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="positive">positive barplot</iframe>
-<iframe src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="negative">negative barplot</iframe>
-<iframe src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline">violent barplot</iframe>
+<iframe class="toggle-frame" src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="positive" style="display: block;">positive barplot</iframe>
+<iframe class="toggle-frame" src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="negative" style="display: none;">negative barplot</iframe>
+<iframe class="toggle-frame" src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline" style="display: none;">violent barplot</iframe>
 
 
 From the scatterplot, we see that 
