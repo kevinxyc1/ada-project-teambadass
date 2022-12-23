@@ -262,8 +262,8 @@ function showFrame(frameId) {
 <button class="button" style="width: 20%;" onclick="showFrame('violent')">Violent</button>
 
 <!-- Create the iframes -->
-<iframe class="toggle-frame" src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="positive" style="display: block;">positive barplot</iframe>
-<iframe class="toggle-frame" src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="negative" style="display: none;">negative barplot</iframe>
+<iframe class="toggle-frame" src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="positive" style="display: none;">positive barplot</iframe>
+<iframe class="toggle-frame" src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="negative" style="display: block;">negative barplot</iframe>
 <iframe class="toggle-frame" src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline" style="display: none;">violent barplot</iframe>
 
 
