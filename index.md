@@ -225,9 +225,36 @@ To make it a fair measure for all movies with various plot length, we will take 
 ### Linear Regression
 To commence the analysis, we perform linear regression of positive, negative, violent word proportion with respect to revenue and discover if there is any linear relationship.
 
-<iframe src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative">positive barplot</iframe>
-<iframe src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline">negative scatterplot</iframe>
-<iframe src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline">violent scatterplot</iframe>
+
+<style>
+  /* Style the buttons */
+  .button {
+    background-color: #003e1f;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+  }
+
+  /* Style the iframes */
+  iframe {
+    display: none;  /* Hide all iframes by default */
+  }
+</style>
+
+<!-- Create the buttons -->
+<button class="button" onclick="showFrame('positive')">Positive</button>
+<button class="button" onclick="showFrame('negative')">Negative</button>
+<button class="button" onclick="showFrame('violent')">Violent</button>
+
+<!-- Create the iframes -->
+<iframe src="assets/plot/revenue_positive_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="positive">positive barplot</iframe>
+<iframe src="assets/plot/revenue_negative_bar.html" width="750px" height="530px" frameborder="0" position="relative" id="negative">negative barplot</iframe>
+<iframe src="assets/plot/revenue_violent_bar.html" width="750px" height="530px" frameborder="0" position="relative" display="inline">violent barplot</iframe>
+
 
 From the scatterplot, we see that 
 - there is a negative linear relationship between positive word proportion and revenue. 
