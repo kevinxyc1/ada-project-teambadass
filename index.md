@@ -201,7 +201,7 @@ We've learned a lot about how a movie's cast affects its box office revenue thro
 ## Runtime: The Sweet Spot
 Are you ready to find out if a movie's runtime has the power to make or break its box office success? Let's dive into the data and see if longer or shorter movies come out on top. But first, let's take a look at the distribution of runtime across all movies and see what the most common range is.
 
-<iframe src="assets/plot/runtime_hist.html" width="750px" height="630px" frameborder="0" position="relative">Runtime Histogram</iframe>
+<iframe src="assets/plot/crazy_runtime_plot.html" width="750px" height="630px" frameborder="0" position="relative">Runtime Histogram</iframe>
 
 The first step to discover the relationship is through linear regression between runtime and revenue. From our model, there is a slight positive linear relationship between runtime and revenue. However from the regression analysis, the R squared value (0.035) is too small to justify the dependency between runtime and revenue. We also see that movie with runtime between 80-120 minutes have similar distribution of revenue and movies with runtime less than 80 minutes generate less revenue (highet revenue is below $400000000). Thus we can raise the question that if 80 minute could be a threshold for movie's revenue performance and we will address it in the next section.
 
