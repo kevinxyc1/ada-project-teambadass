@@ -119,7 +119,7 @@ It's also worth mentioning that budget is a big factor in how much money a movie
 ### The Movie Cast Factor: How Actor combinations affect financial success
 Have you ever noticed that some actors seem to be in a ton of movies together? Network analysis can help us see these connections between actors and how they might affect each other's impact on a movie's revenue. By turning the relationships between actors into a visual network, we can find patterns and communities in the movie industry and get a deeper understanding of how actors contribute to revenue. Network analysis can give us some really interesting insights and help us make sense of all the complex data we have about actors and revenue. Overall, adding this technique to our analysis of actor contributions can help us understand things in a new way.
 
-<img src="assets/img/net1.png" height=800px width=800px class="center"/>
+<img src="assets/img/net1.png" height=600px width=600px class="center"/>
 
 We made a graph that shows how actors are connected through the movies they've been in together. The actors are the dots (or "nodes"), and the movies they were in together are the lines (or "edges") connecting them. The size of the dots shows how much the movies that actor was in made on average, and the thickness of the lines shows how many movies the actors were in together.
 
@@ -129,8 +129,8 @@ Our graph has 61 actors and 256 connections. In the next section, we'll take a c
   img#communities_img {
     display: block;
     margin-left: 20;
-    width: 650px;
-    height: 557px;
+    width: 600px;
+    height: 500px;
   }
 </style>
 
@@ -159,8 +159,8 @@ Regardless, it's still interesting to see how actors are connected and how they 
   img#flavour2_img {
     display: block;
     left-margin: 0 auto;
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
   }
 </style>
 
