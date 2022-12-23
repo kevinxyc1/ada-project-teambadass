@@ -19,22 +19,26 @@ So grab your popcorn and join us as we explore the data and see what insights we
 
 ## Release Date:
 
-To begin with, we aim to investigate the influence of a movie's release date on its box office revenue. Since our goal is to create a recipe for successfull movies in the future, we will focus on determining the best time of a year to release a movie by comparing the mean revenue of the different months. To improve our analysis and include the wider time span of the data we adjust the revenue and budget for inflation.
+To begin with, we aim to investigate the influence of a movie's release date on its box office revenue. Since our goal is to create a recipe for successfull movies in the future, we will focus on determining the best time of a year to release a movie by comparing the mean revenue of the different months. To improve our analysis and include the wider time span of the data we adjust for inflation.
+
+#### Release year and adjusting for inflation
 
 We start by analysing the correlation between the release year and the revenue. Plotting the correlation for the original data and the adjusted data we observe the need for adjusting for inflation since the correlation is clearly weakened. This observation is also supported by a Spearman Correlation Coefficient of 0.01 with a p-value of 0.4. 
 
-- insert plot year/box office revenue and year/box office revenue corrected
+<iframe src="assets/plot/inflation-plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+#### Release month 
 
 We continue by analysing the correlation between the month of the release of a movie and its revenue. Therefore, we group the data into the different release months and check if there a significants differences between these means. To check for significant differences we perform a One-way ANOVA test. Since we obtain a p-value < 0.05 we reject the null hypothesis that the means for each month is equal and we continue our analysis to find the best month in terms of revenue.
 
 By performing an idependent t-test to check for the differences between a month compared to the rest we can observe that most of the months have statistical significant different means. In particular, we obtain June as the month with the highest mean and the lowest p-value. 
 
-To gain more insight we ask if the best release month differs for different genres. Note that we will include the ten most common genre for the sake of clarity. 
+To gain more insight we ask if the best release month differs for different genres. Note that we limit ourselves to the ten most common genre for the sake of clarity. 
 
 
 <iframe src="assets/plot/genre-plot-sm.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-We repeat our idependet t-test analysis from beforehand to subsets of the data corresponding to the different genres. As a result we obtain the months which represent the max mean per genre which are all statistical significantly different in comparison to the rest. Since we obtain different months for different genre, we conclude that it is important to know what kind of movie we are dealing with before deciding on an optimal release date. For example for comedy movies June is the month with the highest mean revenue while for romance films November has the highest mean in revenue.
+We repeat our independet t-test analysis from beforehand to the subsets of the data corresponding to the different genres. We filter the result for months that have a statistical significantly different mean than the rest and represent the maximum in terms of mean revenue per genre. Since we obtain different months for different genre, we conclude that it is important to know what kind of movie we are dealing with before deciding on an optimal release date. For example for adventure movies May is the month with the highest mean revenue while for romance films November has the highest mean in revenue.
 
 -----------------------
 
