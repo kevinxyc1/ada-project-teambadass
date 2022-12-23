@@ -46,60 +46,87 @@ We repeat our independet t-test analysis from beforehand to the subsets of the d
 
 To analyze the effect diversity has on movie box office revenue, we first had to estimate the diversity of each movie. There are several ways to assess the diversity in a film which may lead to different results than we will present. The first thing we had to do was to figure out a way to estimate diversity based on our data. We decided to use ethnicity and gender as the estimates for the diversity of each movie. These two aspects will give a partial picture of diversity's effect on a movie's success. The next step was to give each film a “score of ethnicity” and a “score of gender.” We observed a high correlation between the number of actors in a film and the movie's box office revenue. It was, therefore, essential to find a score that considered the number of actors. To estimate ethnicity, we introduced the “ethnicity score,” which counts the number of ethnicities present in a movie and divides it by the total number of actors. We also considered different approaches, such as giving higher weight to rare ethnicities, but concluded that our approach would suffice for our analysis, which is to look at the effect of diversity on revenue and not to get a complete insight into the diversity in each movie. To estimate gender, we introduced the “fraction of females,” computed by counting the number of female actors and dividing it by the total number of actors in that film.
 
-### 1. Ethnicity
 
-As you can see from fig. 1.1, the ethnicity score in movies has increased in recent years, but less than ten movies are released yearly with an ethnicity score above 0.5 (after 1986). When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.7. Increasing the threshold above 0.5 gives a more unreliable result, as the more significant 95% CI indicates. The reason is likely because of the low number of movies, which gives each movie a more substantial impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
+### Ethnicity
+
+#### The Evolution of Ethnicity
+
+The ethnicity score in movies has increased in recent years, but less than ten movies are released yearly with an ethnicity score above 0.5 (after 1986). When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.7. Increasing the threshold above 0.5 gives a more unreliable result, as the more significant 95% CI indicates. The reason is likely because of the low number of movies, which provides each film with a more substantial impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
+
 
 #### Fig. 1.1: Movie Distribution
 <iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-We grouped our data into five based on their ethnicity score to further investigate the effect; the results are shown in fig. 1.2. The error bars represent the 95% CI. In the search for the best interval, we found an ethnicity score between (0.6 – 0.8] to be the most lucrative considering revenue maximization when we look at the mean revenue in our data set. However, overlapping 95% CI between (0.2 – 0.8] prevents us from concluding which interval is the best. On the other side, we observe that the extreme cases of ethnicity score between (0  – 0.2] and (0.8  – 1] perform poorly, telling us that ethnicity score is something you should consider planning your next movie, so you are not unlucky and end up in these groups. Further, the uncertainty associated with the revenue estimate for the interval (0.6 – 0.8] is worth noticing. Even though this interval resulted in the highest revenue in our data set, there is no guarantee that this will apply in general.
+#### The Sweet Spot
+
+We grouped our data into five based on their ethnicity score to find the best ethnicity score interval, or as we like to call it, **The Sweet Spot**. In the search for the best interval, we found an ethnicity score between (0.6 – 0.8] to be the most lucrative considering revenue maximization when we look at the mean revenue in our data set. However, overlapping 95% CI between (0.2 – 0.8] prevents us from concluding which interval is the best. On the other side, we observe that the extreme cases of ethnicity score between (0  – 0.2] and (0.8  – 1] perform poorly, telling us that ethnicity score is something you should consider planning your next movie. You better stay between (0.2 – 0.8) if you aim to become rich!**$$$** Further, the uncertainty associated with the revenue estimate for the interval (0.6 – 0.8] is worth noticing. Even though this interval resulted in the highest revenue in our data set, there is no guarantee that this will apply in general. This interval is for the gambler; if you do not have the guts to take a loss, you better stay in (0.4 – 0.6]!
+
 
 #### Fig. 1.2: Revenue - Overall 
 <iframe src="assets/plot/revenue_ethnicity_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-We also looked at how the effect of ethnicity has changed over time. Since the primary goal of this analysis is to make a recipe for a movie´s success, we looked at recent movies, starting with films after the year 2000. From fig. 1.3 we observe that the treated group (the group with ethnicity score above the given threshold) tends to lie above the control group (the group with ethnicity score below or equal to the given threshold). Still, we cannot find a statistically significant difference between the two groups.
+#### Time to Enter the Movie Market?
+
+A good investor never solely depends on historical data; they try to predict the future! We looked at how the ethnicity score market has changed in recent years, using this to predict the future journey. Since the primary goal of this analysis is to make a recipe for a movie´s success, we looked at recent movies, starting with films after the year 2000. We observed that the treated group (the group with an ethnicity score above the given threshold) tends to lie above the control group (the group with an ethnicity score below or equal to the given threshold). Still, we cannot find a statistically significant difference between the two groups. Maybe it is best to wait for this one out. However, the time in the market beats the timing, so if you love movies as much as we do, you should not take this as a discouragement to invest.
+
 
 #### Fig. 1.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-The analysis we have done so far has been naïve, not considering that many confounders may affect the revenue. To try to isolate ethnicity's effect on revenue, we have performed a paired matching. By completing the paired matching, we try to compare movies with similar probability of receiving the treatment, which in our case is an ethnicity score above 0.5. We used logistic regression to compute the propensity score based on the movie runtime, the year the movie was released, the number of languages present, and the number of countries the film was shown. The results can be seen in fig. 1.4. Using the threshold of 0.5 on the ethnicity score, we did not find any statistically significant difference between the two groups.
+#### Paired Matching  – The Classic
+
+Our analysis so far has been naïve, not considering that many confounders may affect the revenue. To try to isolate ethnicity's effect on revenue, we have performed a paired matching. By completing the paired matching, we try to compare movies with similar probability of receiving the treatment, which in our case is an ethnicity score above 0.5. We used logistic regression to compute the propensity score based on the movie runtime, the year the movie was released, the number of languages present, and the number of countries the film was shown. With a threshold of 0.5 on the ethnicity score, we did not find any statistically significant difference between the two groups. Was all this reading just a waste of time? Not so fast!
+
 
 
 #### Fig 1.4: Mean Difference: Paired Matching with Threshold = 0.5
 <iframe src="assets/plot/mean_difference_ethnicity_1.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This adjustment discovered that movies with ethnicity scores above 0.33 achieve significantly better revenue than movies with ethnicity scores below or equal to 0.33.
+#### Paired Matching – The Experienced
+
+If it were as easy as just using paired matching with a threshold of 0.5, everyone would have been movie millionaires. To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This adjustment discovered that movies with ethnicity scores above 0.33 achieve significantly better revenue than movies with ethnicity scores below or equal to 0.33.
 
 
 #### Fig 1.5: Mean Difference: Paired Matching with Threshold = 0.33
 <iframe src="assets/plot/mean_difference_ethnicity_2.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-### 2. Gender
+### Gender
 
-We observed an increase in the fraction of females over time. However, as seen in fig. 2.1, a high fraction of females tends to generate lower revenue. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 0.7, which indicates that more data is needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be that it took time for the audience to digest this change.
+#### The Evolution of Gender
+
+We observed an increase in the fraction of females over time. However, a high fraction of females tends to generate lower revenue, except for a peak in revenue at 0.7. It is also essential to notice the uncertainty associated with the mean estimate. The uncertainty is high in the interval between 0.5 – 0.7, which indicates that more data may be needed to conclude. Movies with a threshold above 0.5 did not have above ten releases until 1990, and the poor revenue might be caused because it takes time for the audience to digest this change. 
 
 
 #### Fig. 2.1: Movie Distribution
 <iframe src="assets/plot/distribution_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-To obtain better insight into a movie's best fraction of females, we divided the film into five groups based on their female fractions (fig. 2.2). The result shows that the worst performing interval is the fraction of females between (0.8 – 1]. In comparison, the movies with a fraction of males between (0.8 – 1] perform well and have the highest mean in our data set. There may be several reasons for this, for example, that the most attractive genre may be better suited for male actors. We will try to isolate the effect of fractions of females in the paired matching later in this analysis, but for now, we will stick to our naïve approach. The most crucial intel from fig. 2.2 is to avoid a fraction of females between (0.8 – 1]. It is more challenging to select the best interval, as the groups (0 – 0.2], (0.2 – 0.4], and (0.6 – 0.8] have 95% CI that overlaps. We notice that (0.6 – 0.8] has a significant 95% CI, which indicates that a fraction of females between (0 – 0.4] may be the safer choice.
+#### What is the Best Fraction of Females?
+
+To obtain better insight into a movie's best fraction of females, we divided the film into five groups based on their female fractions. We observe that the worst performing interval is the fraction of females between (0.8 – 1]. In comparison, the movies with a fraction of males between (0.8 – 1] perform well and have the highest mean in our data set. There may be several reasons for this, for example, that the most attractive genre may be better suited for male actors. We will try to isolate the effect of fractions of females in the paired matching later in this analysis, but for now, we will stick to our naïve approach. The most crucial intel for now is to avoid a fraction of females between (0.8 – 1] in your movie. It is more challenging to select the best interval, as the groups (0 – 0.2] and (0.2 – 0.4] have 95% CI that overlaps. 
+
 
 #### Fig. 2.2: Revenue - Overall
 <iframe src="assets/plot/revenue_female_bar.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-Until now have been looking at the overall impact fraction of females has on revenue. This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. As you can see in fig. 2.3 the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. However, we observe a significantly better revenue for the control group with a threshold of 0.5 after 2009. This indicates that a fraction of females between 0.4 and 0.5 may be avoided as they have a significantly worse revenue.
+#### Buy the Dip?
+
+Our result has shown that movies with a high fraction of females perform poorly, but is this about to change? This analysis aims to find the best fraction of females if you were supposed to release a movie today. To do so, we will investigate the effect over time and look at the trend after 2000. We find that the control group's mean revenue lies above the treated group's for all the considered thresholds. But much overlap between the 95 % CI prevents us from concluding. We do not find any signals in the market indicating that movies with a high fraction of females will start to perform better. But the difference is insignificant, so minor changes may give better results.
 
 #### Fig. 2.3: Revenue - Over Time
 <iframe src="assets/plot/revenue_gender.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-As mentioned earlier, several factors may affect the movie revenue, and there is no guarantee that our findings are genuinely caused by the fraction of females in the movie. To try to isolate gender's effect on revenue, we have performed a paired matching to compare movies with similar probability of receiving the treatment, which is a fraction of females above 0.5. We used logistic regression to compute the propensity score based on the movie runtime, the year the movie was released, the number of languages present, and the number of countries the movie was shown. The results can be seen in fig. 2.4. Using the threshold of 0.5 on the fraction of females, we discovered that movies with a fraction of females below 0.5 achieve statistically significant better revenue.
+#### Paired Matching – The Classic
+
+As mentioned earlier, several factors may affect the movie revenue, and there is no guarantee that our findings are genuinely caused by the fraction of females in the movie. To try to isolate gender's effect on revenue, we have performed a paired matching to compare movies with similar probability of receiving the treatment, which is a fraction of females above 0.5. We used logistic regression to compute the propensity score based on the movie runtime, the year the movie was released, the number of languages present, and the number of countries the film was shown. Using the threshold of 0.5 on the fraction of females, we discovered that movies with a fraction of females below 0.5 achieve statistically significantly better revenue.
 
 
 #### Fig 2.4: Mean Difference: Paired Matching with Threshold = 0.5
 <iframe src="assets/plot/mean_difference_female_1.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This adjustment increased the mean difference between the treated and control group even further, as seen if fig. 2.5.
+#### Paired Matching – The Experienced
+
+To further analyze the results, we adjusted the threshold from 0.5 to 0.33. This adjustment increased the mean difference between the treated and control group even further.
+
 
 #### Fig 2.5: Mean Difference: Paired Matching with Threshold = 0.33
 <iframe src="assets/plot/mean_difference_female_2.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
