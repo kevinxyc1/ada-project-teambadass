@@ -54,7 +54,6 @@ To analyze the effect diversity has on movie box office revenue, we first had to
 
 
 
-
 ### 1. Ethnicity
 
 As you can see from fig. 1.1, the ethnicity score in movies has increased in recent years, but there are still a few movies with an ethnicity score above 0.55. When we adjust the threshold for the ethnicity score, we observe a clear increasing trend from zero to the point of 0.4. Increasing the threshold above 0.4 gives a more unreliable result, as the more significant 95% CI indicates. The reason is likely because of the low number of movies, which gives each movie a more substantial impact on the mean revenue. Another possible explanation is that these movies first occur in recent years, and the audience has yet to decide whether this ethnicity score increases their movie experience.
