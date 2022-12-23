@@ -128,7 +128,7 @@ Our graph has 61 actors and 256 connections. In the next section, we'll take a c
 <style>
   img#communities_img {
     display: block;
-    margin-left: 20;
+    margin-left: 80;
     width: 600px;
     height: 500px;
   }
@@ -147,7 +147,7 @@ Our graph has 61 actors and 256 connections. In the next section, we'll take a c
   }
 </script>
 
-<button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px; margin-left: 180px;" onclick="swapImage()">Average revenue on/off</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 10px 20px; 0; cursor: pointer; width: 30%; border-radius: 10px; font-size: 11px; margin-left: 240px;" onclick="swapImage()">Average revenue on/off</button>
 
 
 We used the Louvain method to split the network of actors into six different communities based on how they're connected through movies. This shows us that there are some actors who tend to work together more often. When we looked closer, we saw that the average revenue for actors in each community varies. Some actors seem to do especially well at the box office. However, we also saw that there was no significant difference in average revenue between the communities, with one exception. This could mean that the community an actor belongs to doesn't necessarily have a big impact on how much money their movies make.
@@ -158,7 +158,7 @@ Regardless, it's still interesting to see how actors are connected and how they 
 <style>
   img#flavour2_img {
     display: block;
-    left-margin: 0 auto;
+    margin-left: 100px;
     width: 600px;
     height: 600px;
   }
@@ -173,7 +173,7 @@ Regardless, it's still interesting to see how actors are connected and how they 
   }
 </script>
 
-<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 20%; border-radius: 10px; font-size: 11px; margin-left: 80px; margin-right: 5px" onclick="swapImage3('assets/img/flavor_graph_different_edges.png')">All connections</button>
+<button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 20%; border-radius: 10px; font-size: 11px; margin-left: 130px; margin-right: 5px" onclick="swapImage3('assets/img/flavor_graph_different_edges.png')">All connections</button>
 <button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; cursor: pointer; width: 20%; border-radius: 10px; font-size: 11px; margin-right: 5px;" onclick="swapImage3('assets/img/community_graph.png')">Community</button>
 <button style="background-color: #003e1f; color: white; border: none; padding: 14px 20px; cursor: pointer; width: 20%; border-radius: 10px; font-size: 11px;" onclick="swapImage3('assets/img/non_community_edges.png')">Non-community</button>
 
