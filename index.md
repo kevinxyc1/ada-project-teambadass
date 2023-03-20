@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Recipe For A Movie's Success 🎬
-subtitle: Analysis of various factors that lead to high box office
+subtitle: Analysis of various factors that lead to high box office revenue
 cover-img: /assets/img/movie.png
 thumbnail-img: /assets/img/movie.png
 share-img: /assets/img/movie.png
