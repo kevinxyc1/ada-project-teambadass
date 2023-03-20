@@ -22,6 +22,8 @@ author: Team Badass
 navbar-links:
   Resources:
     - The dataset: "http://www.cs.cmu.edu/~ark/personas/"
+  About:
+    - About the project: "./aboutme.md"
 
 ################
 # --- Logo --- #
