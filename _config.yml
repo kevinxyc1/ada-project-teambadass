@@ -22,7 +22,7 @@ author: Team Badass
 navbar-links:
   Resources:
     - The dataset: "http://www.cs.cmu.edu/~ark/personas/"
-    - About us: "http://www.cs.cmu.edu/~ark/personas/"
+    - About us: "./about.md"
 
 ################
 # --- Logo --- #
